@@ -4,6 +4,7 @@ import Header from "./Header"
 import About from "./About"
 import Experience from "./Experience"
 import Projects from "./Projects"
+import ContactForm from "./ContactForm"
 
 type Props = {}
 
@@ -15,6 +16,6 @@ const LandingPageComponents = ({}:Props) => {
     )
 }
 
-export {Header,About,Experience,Projects};
+export {Header,About,Experience,Projects,ContactForm};
 
 export default LandingPageComponents;

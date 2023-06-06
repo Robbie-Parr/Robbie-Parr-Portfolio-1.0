@@ -1,6 +1,6 @@
 import React from "react"
 
-import {Header,About,Experience,Projects} from "../components/LandingPageComponents"
+import {Header,About,Experience,Projects,ContactForm} from "../components/LandingPageComponents"
 
 const Home = () => {
   return(
@@ -14,8 +14,11 @@ const Home = () => {
         {/* Experience section */}
         <Experience/>
         
-        {/*Projects section */}
+        {/* Projects section */}
         <Projects/>
+
+        {/* Contact Form section */}
+        <ContactForm/>
     </>
   )
   
