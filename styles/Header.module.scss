@@ -1,0 +1,75 @@
+#header{
+    width: 100%;
+    height: 10%;
+    padding: 1%;
+}
+
+.header_image{
+    flex:.2;
+    padding-left: 5%;
+    > img{
+        height:100px;
+        width:100px;
+        border-radius: 100px;
+        margin: 10px;
+    }
+}
+
+
+#header_icon_section{
+    display: flex;
+    flex:.8;
+    flex-direction: row;
+    padding-top:10px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background-image: url("/TextureBackground01.png");
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#vital_icons{
+    flex:.6;
+}
+
+#nonvital_icons{
+    flex:.4;
+}
+
+.LinkedIn_icon{
+    background-color: #0072b1;
+    padding:8px;
+    border-radius: 10px;
+    height:40px;
+    width:40px;
+
+}
+
+.Meetup_icon{
+    background-color: red;
+    padding:8px;
+    border-radius: 10px;
+    height:40px;
+    width:40px;
+}
+
+.Blog_Icon{
+    background-color: aqua;
+    padding:8px;
+    border-radius: 10px;
+    height:5px;
+    width:80px;
+
+    > h2{
+        color: whitesmoke;
+    }
+    
+}
+
+.CV_Icon{
+    background-color: orangered;
+    height:40px;
+    width:40px;
+    border-radius: 10px;
+}

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background-image: url("/TextureBackground03.png");
+}
 
 /*Tailwind overrides */
 h1{
@@ -27,3 +30,4 @@ h5{
 h6{
     font-size:.67em;
 }
+
