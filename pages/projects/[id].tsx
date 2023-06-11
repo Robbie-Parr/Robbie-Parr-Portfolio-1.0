@@ -7,7 +7,11 @@ const Page = () => {
   const {id} = router.query;
   return(
     <>
-      <h1>Project id:{id}</h1>
+      {/*<h1>Project id:{id}</h1>*/}
+      <h4>This page is in development</h4>
+      <a href="../">
+        <h2>{"<- Back"}</h2>
+      </a>
     </>
   )
     
