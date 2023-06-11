@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import {motion} from "framer-motion";
 
 import styles from '@/styles/About.module.scss';
 
@@ -28,12 +29,44 @@ const About = ({}:Props) => {
     ]
 
     return(
-        <div className="flex-row flex" id={styles.main_about_section}>
+        <motion.div 
+            initial={{
+                x:-500,
+                opacity:0,
+            }}
+
+            animate={{
+                x:0,
+                opacity:1,
+            }}
+
+            transition={{
+                duration:1.2
+            }}
+        
+            className="flex-row flex" id={styles.main_about_section}
+            >
             <h1 className="text-center items-center justify-center p-4" id={styles.about_title}>About Me</h1>
-            <div className="space-y-5 p-4 bg-white" id={styles.about_text}>
+            <motion.div 
+                initial={{
+                    opacity:0,
+                    scale:0.8
+                }}
+
+                animate={{
+                    opacity:1,
+                    scale:1
+                }}
+
+                transition={{
+                    duration:1.2
+                }}
+            
+                className="space-y-5 p-4 bg-white" id={styles.about_text}
+                >
                 {aboutme_list_of_text.map(text => <p>{text}</p>)}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 
