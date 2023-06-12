@@ -24,17 +24,17 @@ const Home = () => {
           </section>
 
           {/* Experience section */}
-          <section className="snap-center h-screen" id="experience">
+          <section className="snap-start h-screen" id="experience">
             <Experience/>
           </section>
         
           {/* Projects section */}
-          <section className="snap-center h-screen" id="projects-section">
+          <section className="snap-start h-screen" id="projects-section">
             <Projects/>
           </section>
 
           {/* Contact Form section */}
-          <section className="snap-center h-screen" id="contact-form">
+          <section className="snap-start h-screen" id="contact-form">
             <ContactForm/>
           </section>
         
