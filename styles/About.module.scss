@@ -17,4 +17,7 @@
 #about_text{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    @media (min-width: 480px) {
+        font-size:.6em;
+    }
 }
