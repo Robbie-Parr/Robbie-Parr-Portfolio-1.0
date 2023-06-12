@@ -4,7 +4,7 @@ import { Graph } from "react-d3-graph";
 import styles from '@/styles/ProjectSection.module.scss';
 
 type Props = {
-    onClickNode : Function
+    onClickNode : (nodeId: string) => void
 }
 
 const Projects = ({onClickNode}:Props) => {
