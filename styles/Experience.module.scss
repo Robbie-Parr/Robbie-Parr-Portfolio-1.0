@@ -1,0 +1,111 @@
+#main{
+    margin-left: 10%;
+}
+
+#title{
+    background-image: url("/TextureBackground01.png");
+    border-radius: 100px;
+    color:whitesmoke;
+    width:20%;
+    //margin-left: 10%;
+}
+
+#carousel{
+    overflow-x:scroll;
+    display: flex;
+    min-height: 70%;
+    
+}
+
+#carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+#card{
+    min-width: 40%;
+    min-height:600px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-right:8%;
+    margin-top:2%;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+
+    > #experience_details{
+        display: flex;
+        padding:2%;
+        
+
+        > #experience_titles{
+            flex:.7;
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 10px;
+            background-color: whitesmoke;
+
+            > h1{
+                padding-bottom: 2%;
+                background-color: lightgrey;
+                border-top-left-radius: 10px;
+                box-shadow: 0px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            > h3{
+                padding-top:1%;
+            }
+            padding-bottom: 2%;
+            border-bottom-left-radius: 0px;
+        }
+
+        > #experience_dates{
+            flex:.3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            align-self: center;
+            padding:1%;
+            margin: 1%;
+            background-color: whitesmoke;
+            
+            
+        }
+    }
+    
+    > #details{
+        display: flex;
+        margin:5%;
+        padding:5%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: whitesmoke;
+    }
+
+    > #information{
+        display: flex;
+        padding:1%;
+        flex-direction: column;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 5%;
+        background-color: whitesmoke;
+
+        > #takeaways{
+            flex-direction: column;
+            //text-align: center;
+            
+            > li{
+                max-width: 80%;
+                text-align: left;
+                padding-left: 10%;
+                padding-bottom: 5%;
+            }
+        }
+
+        > #references{
+            padding-top: 10%;
+            flex-direction: column;
+            padding-bottom: 5%;
+        }
+    }
+}
+
