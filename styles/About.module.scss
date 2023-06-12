@@ -1,0 +1,20 @@
+#main_about_section{
+    flex:0.7;
+    margin-left:24%;
+    margin-right:6%;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+#about_title{
+    background-image: url("/TextureBackground01.png");
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color:whitesmoke;
+    
+}
+
+#about_text{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
