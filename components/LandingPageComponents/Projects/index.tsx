@@ -16,7 +16,7 @@ const Projects = ({}:Props) => {
     };
   
     return(
-        <div className="">
+        <div className="" id={styles.main}>
             <div id={styles.title}>
                 <h1>Projects</h1>
             </div>
