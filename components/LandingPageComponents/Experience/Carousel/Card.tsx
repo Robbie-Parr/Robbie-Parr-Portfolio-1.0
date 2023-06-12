@@ -7,8 +7,8 @@ type Props = {
     job_title:String,
     dates:String,
     details:String,
-    key_takeaways:[String],
-    references:[String]
+    key_takeaways:[string],
+    references:[string]
 }
 
 const Card = ({establishment,
@@ -35,14 +35,14 @@ const Card = ({establishment,
                 <div id={styles.takeaways}>
                     {key_takeaways!=null && <h2>Key Takeaways</h2>}
                     {key_takeaways?.map(takeaway => 
-                        <li>{takeaway}</li>
+                        <li key={takeaway}>{takeaway}</li>
                         )}
                 </div>
                 {references!=null &&
                 <div id={styles.references}>
                     <h2>References</h2>
                     {references?.map(reference =>
-                        <li>{reference}</li>
+                        <li key={reference}>{reference}</li>
                         )}
                 </div>
                 }

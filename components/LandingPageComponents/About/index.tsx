@@ -64,7 +64,7 @@ const About = ({}:Props) => {
             
                 className="space-y-5 p-4 bg-white" id={styles.about_text}
                 >
-                {aboutme_list_of_text.map(text => <p>{text}</p>)}
+                {aboutme_list_of_text.map(text => <p key={text}>{text}</p>)}
             </motion.div>
         </motion.div>
     )
