@@ -41,12 +41,7 @@ const ContactForm = ({}:Props) => {
                         <p className="text-2xl">07864 659097</p>
                     </div>
 
-                    <div className="flex items-center space-x-1 justify-center">
-                        <EnvelopeIcon className="h-7 w-7 animate-pulse text-[#f7690a]" />
-                        <p className="text-2xl">RobbieJParr@hotmail.com</p>
-                    </div>
-                    
-                    <div className="flex items-center space-x-1 justify-center">
+                    <div className="flex items-center space-x-1" id={styles.linkedIn_section}>
                         <a href="https://www.linkedin.com/in/robbie-parr/">
                             <div className={styles.LinkedIn_icon}>
                                 <FontAwesomeIcon icon={faLinkedin} className="animate-pulse" size="xl" />
@@ -54,6 +49,13 @@ const ContactForm = ({}:Props) => {
                         </a>
                         <p>/robbie-parr/</p>
                     </div>
+
+                    <div className="flex items-center space-x-1 justify-center">
+                        <EnvelopeIcon className="h-7 w-7 animate-pulse text-[#f7690a]" />
+                        <p className="text-2xl">RobbieJParr@hotmail.com</p>
+                    </div>
+                    
+                    
                 </div>
 
                 <form className="flex flex-col space-y-2 mx-auto pt-5" id={styles.form}

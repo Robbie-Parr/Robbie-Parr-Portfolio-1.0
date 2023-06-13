@@ -70,7 +70,7 @@
     }
 
     @media (min-width: 580px) {
-        flex-direction: auto;
+        flex-direction: row;
         font-size:1em;
     }
 
@@ -101,18 +101,21 @@
     }
 
     @media (min-width: 580px) {
-        width:fit-content;
+        width:50%;
     }
 
-    > button{
-        @media (min-width: 480px) {
-            margin-left:60%;
-            width:40%;
-        }
-    
-        @media (min-width: 580px) {
-            margin-left:10%;
-            width:100%;
-        }
+    > button{ 
+        margin-left:60%;
+        width:40%;
+    }
+}
+
+#linkedIn_section{
+    @media (min-width: 480px) {
+        padding-left:12%;
+    }
+
+    @media (min-width: 580px) {
+        padding-left:0;
     }
 }

@@ -20,14 +20,14 @@
     
         @media (min-width: 580px) {
             font-size:2em;
-            width:58%;
+            width:65%;//58%;
             margin-left: 0;
         }
     }
 }
 
 #graph{
-    
+    //Style of graph is a bit off for mobile devices
     border-bottom-left-radius: 10px;
     
     > #innerGraph{
@@ -47,7 +47,7 @@
     @media (min-width: 580px) {
         //leave graph in original format
         left:0;
-        max-width:58%;
+        max-width:100%;//58%;
     }
     
     }
@@ -56,14 +56,14 @@
         //push graph to the left
         margin-left:-80%;
         margin-right:-50%;
-        //max-width: 100%;
+        
         
     }
     @media (min-width: 580px) {
         //leave graph in original format
         margin-left:0;
         margin-right:0;
-        //max-width: 58%;
+        
         
     }
 }
@@ -85,7 +85,7 @@
 
         > h1{
             @media (min-width: 480px) {
-                font-size:1.2em;
+                font-size:1em;
             }
         
             @media (min-width: 580px) {
