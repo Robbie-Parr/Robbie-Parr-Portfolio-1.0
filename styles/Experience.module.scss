@@ -7,10 +7,18 @@
     background-image: url("/TextureBackground01.png");
     //border-radius: 10px;
     color:whitesmoke;
-    width:45%;
+    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+    @media (min-width: 480px) {
+        font-size:1.2em;
+        width:60%;
+    }
+
+    @media (min-width: 580px) {
+        font-size:2em;
+        width:40%;//45%;
+    }
     //margin-left: 10%;
 }
 
@@ -26,14 +34,20 @@
   }
 
 #card{
-    min-width: 40%;
-    min-height:600px;
+    //min-width: 40%;
+    min-height:50%;
     background-color: grey;
     border-radius: 20px;
     margin-right:8%;
     margin-top:1%;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
+    @media (min-width: 480px) {
+        min-width: 60%;
+
+    }
+    @media (min-width: 580px) {
+        min-width:40%;
+    }
 
     > #experience_details{
         display: flex;
@@ -51,10 +65,24 @@
                 background-color: lightgrey;
                 border-top-left-radius: 10px;
                 box-shadow: 0px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                @media (min-width: 480px) {
+                    font-size:1em;
+                }
+            
+                @media (min-width: 580px) {
+                    font-size:2em;
+                }
             }
 
             > h3{
                 padding-top:1%;
+                @media (min-width: 480px) {
+                    font-size:.8em;
+                }
+            
+                @media (min-width: 580px) {
+                    font-size:1.17em;
+                }
             }
             padding-bottom: 2%;
             border-bottom-left-radius: 0px;
@@ -69,6 +97,15 @@
             margin: 1%;
             background-color: whitesmoke;
             
+            > h4{
+                @media (min-width: 480px) {
+                    font-size:.5em;
+                }
+            
+                @media (min-width: 580px) {
+                    font-size:1em;
+                }
+            }
             
         }
     }
@@ -81,6 +118,12 @@
         border-top-right-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         background-color: whitesmoke;
+        @media (min-width: 480px) {
+            font-size:.6em;
+        }
+        @media (min-width: 580px) {
+            font-size:1em;
+        }
     }
 
     > #information{
@@ -92,6 +135,13 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin: 5%;
         background-color: whitesmoke;
+
+        @media (min-width: 480px) {
+            font-size:.6em;
+        }
+        @media (min-width: 580px) {
+            font-size:1em;
+        }
 
         > #takeaways{
             flex-direction: column;

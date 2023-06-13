@@ -22,8 +22,6 @@ const About = ({}:Props) => {
 
         `I recently finished my Third and Final year studying Computer Science at the University of York, graduating July 2023.`,
         
-        `I am currently looking for my first graduate/junior role.`,
-        
         `Please contact me via LinkedIn if you have an opportunity, and if I don't have a language or framework skill you are looking for, tell me what the language 
         or framework is and I'll go learn it.`
     ]

@@ -61,30 +61,34 @@ const Projects = ({onClickNode}:Props) => {
         ],
     };
   
+    const focus = 1.4;
+    const size = 420;
   
     const config = {
         nodeHighlightBehavior: true,
         node: {
             color: "darkorange",
-            size: 420,
+            size: size,
             highlightStrokeColor: "orange",
         },
         link: {
             highlightColor: "darkgray",
         },
         directed:true,
-        focusZoom:1.4,
+        focusZoom:focus,
     };
   
     
     return(
         <div id={styles.graph}>
-            <Graph
-                id="graph-id"
-                data={data}
-                config={config}
-                onClickNode={onClickNode}                
-            />
+            <div id={styles.innerGraph}>
+                <Graph
+                    id="graph-id"
+                    data={data}
+                    config={config}
+                    onClickNode={onClickNode}                
+                />
+            </div>
         </div>
     )
 }
