@@ -56,7 +56,7 @@ const ContactForm = ({}:Props) => {
                     </div>
                 </div>
 
-                <form className="flex flex-col space-y-2 w-fit mx-auto pt-5"
+                <form className="flex flex-col space-y-2 mx-auto pt-5" id={styles.form}
                     onSubmit={handleSubmit(onSubmit)}>
                     
                         <input className={styles.contact_form_input} 
@@ -80,7 +80,7 @@ const ContactForm = ({}:Props) => {
                         placeholder="Message"
                         {...register("message")} />
                     
-                    <button className="bg-[#f7690a] py-2 px-10 rounded-md text-black font-bold ml-64"
+                    <button className="bg-[#f7690a] py-2 rounded-md text-black font-bold ml-64"
                         type="submit">
                         Submit</button>
                 </form>
