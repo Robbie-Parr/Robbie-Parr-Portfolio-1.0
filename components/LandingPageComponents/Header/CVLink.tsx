@@ -7,7 +7,7 @@ type Props = {}
 
 const CVLink = ({}:Props) => {
     return(
-        <a href="/CVRobbieParr.pdf" download>
+        <a href="/CV.pdf" download>
             <div className={styles.CV_Icon}>
                 <h2>CV</h2>
             </div>
