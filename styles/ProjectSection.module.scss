@@ -12,7 +12,7 @@
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
 
-        @media (min-width: 480px) {
+        @media (max-width: 570px) {//(min-width: 480px) {
             font-size:1.2em;
             width:95%;
             margin-left: -20%;
@@ -38,7 +38,7 @@
     //border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding:.5%;
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {//(min-width: 480px) {
         //push graph to the left
         left:80%;
         max-width:75%;
@@ -52,7 +52,7 @@
     
     }
 
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {//(min-width: 480px) {
         //push graph to the left
         margin-left:-80%;
         margin-right:-50%;
@@ -84,7 +84,7 @@
         //Still not centered?
 
         > h1{
-            @media (min-width: 480px) {
+            @media (max-width: 570px) {//(min-width: 480px) {
                 font-size:1em;
             }
         
@@ -100,7 +100,7 @@
         padding:2%;
 
     }
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {//(min-width: 480px) {
         min-width:30%;
     }
 
@@ -116,7 +116,7 @@
     height:74%;//1% taken up by margin
     padding:5%;
     border-bottom-right-radius: 10px;
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {//(min-width: 480px) {
         font-size:.6em;
     }
     @media (min-width: 580px) {
