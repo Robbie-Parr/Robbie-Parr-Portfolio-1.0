@@ -45,7 +45,7 @@
     padding:1%;
 
     > h4{
-        @media (min-width: 480px) {
+        @media (max-width: 570px) {//(min-width: 480px) {
             font-size:.8em;
         }
     
@@ -64,7 +64,7 @@
 }
 
 #icons{
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {//(min-width: 480px) {
         flex-direction: column;
         font-size:.8em;
     }
@@ -75,7 +75,7 @@
     }
 
     > div {
-        @media (min-width: 480px) {
+        @media (max-width: 570px) {//(min-width: 480px) {
             width:80%;
         }
     
@@ -83,7 +83,7 @@
             width:100%
         }
         > p{
-        @media (min-width: 480px) {
+        @media (max-width: 570px) {//(min-width: 480px) {
             font-size:.8em;
         }
     
@@ -96,7 +96,7 @@
 }
 
 #form{
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {//(min-width: 480px) {
         width:80%;
     }
 
@@ -111,7 +111,7 @@
 }
 
 #linkedIn_section{
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {//(min-width: 480px) {
         padding-left:12%;
     }
 
