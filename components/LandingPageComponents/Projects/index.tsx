@@ -52,7 +52,7 @@ const Projects = ({}:Props) => {
                 <h1>Projects</h1>
             </div>
 
-            <div className="flex">
+            <div className="flex" id={styles.content_section}>
                 {nodes.length>1 &&
                 <Graph 
                     onClickNode={onClickNode} 

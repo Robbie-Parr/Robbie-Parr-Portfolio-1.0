@@ -20,7 +20,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color:whitesmoke;
-    @media (min-width: 480px) {
+    @media (max-width: 570px) {
         font-size:1.2em;
     }
 
@@ -31,10 +31,23 @@
 
 
 #main{
-    width:60%;
-    margin-left: 30%;
-    margin-right:10%;
-    padding-top:.5%;
+    
+    @media (max-width: 570px) {
+        font-size:1.2em;
+        width:90%;
+        margin-left: 5%;
+        margin-right:5%;
+        //padding-top:.5%;
+        margin-top:-25%
+    }
+
+    @media (min-width: 580px) {
+        width:60%;
+        margin-left: 30%;
+        margin-right:10%;
+        padding-top:.5%;
+    }
+
 }
 
 #main_body{

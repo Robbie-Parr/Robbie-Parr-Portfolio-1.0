@@ -19,22 +19,22 @@ const Home = () => {
           {/* <Link href="#contact-form">Tp Contact Form</Link> */}
 
           {/* About section */}
-          <section className="snap-start h-screen" id="about">{/* href="#about" */}
+          <section className="snap-start" id="about">{/* href="#about" */}
             <About/>
           </section>
 
           {/* Experience section */}
-          <section className="snap-start h-screen" id="experience">
+          <section className="snap-start" id="experience">
             <Experience/>
           </section>
         
           {/* Projects section */}
-          <section className="snap-start h-screen" id="projects-section">
+          <section className="snap-start" id="projects-section">
             <Projects/>
           </section>
 
           {/* Contact Form section */}
-          <section className="snap-start h-screen" id="contact-form">
+          <section className="snap-start" id="contact-form">
             <ContactForm/>
           </section>
         
