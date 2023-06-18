@@ -40,13 +40,13 @@ const About = ({}:Props) => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                console.log(responsejson.data)
+                //console.log(responsejson.data)
                 setList(responsejson.data)
             }}
         fetchData();
         },[]);
 
-    console.log(list)
+    //console.log(list)
 
     if(list.text==null){
         return(<div></div>)

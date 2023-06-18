@@ -25,7 +25,7 @@ const Carousel = ({}:Props) => {
         fetchData();
         },[]);
     
-        console.log(experiences)
+        //console.log(experiences)
 
     return(
         <div id={styles.carousel}>
