@@ -1,15 +1,49 @@
 import React from "react"
+import {useEffect, useState } from "react";
 import { Graph } from "react-d3-graph";
 
 import styles from '@/styles/ProjectSection.module.scss';
+import { list } from "postcss";
 
 type Props = {
-    onClickNode : (nodeId: string) => void
+    onClickNode : (nodeId: string) => void,
+    nodeIds: {id: string}[],
+    links:{source1:string,targets:string[]}[]
 }
 
-const Projects = ({onClickNode}:Props) => {
+const Projects = ({onClickNode,nodeIds,links}:Props) => {
+
+    const focus = 1.4;
+    const size = 420;
+    const config = {
+        nodeHighlightBehavior: true,
+        node: {
+            color: "darkorange",
+            size: size,
+            highlightStrokeColor: "orange",
+        },
+        link: {
+            highlightColor: "darkgray",
+        },
+        directed:true,
+        focusZoom:focus,
+    };
+
+    console.log(nodeIds)
+    console.log(links)
+    let graphLinks = [{source:"",target:""}]
+    graphLinks = [...links.map(({source1,targets}) => 
+        targets.map(id => ({ source: source1, target: id }))
+        )].flat(1)
+    
+
+    console.log("Graph links")
+    console.log(graphLinks)
+    
     const data = {
-        nodes: [
+        nodes: 
+            [...nodeIds,{id:""}]
+            /*
             { id: "Portfolio"},
             { id: "Messenger App built using React Native" },
             { id: "3D Model for unique profile picture" },
@@ -33,10 +67,13 @@ const Projects = ({onClickNode}:Props) => {
             { id: "University financial tool" },
 
             { id: ""}
-            
-        ],
-        links: [
-
+            */
+        ,
+        links: 
+            [...graphLinks
+            //{ source: "Messenger App built using React Native", target: "Portfolio" },
+            ]
+            /*
             { source: "Messenger App built using React Native", target: "Portfolio" },
             { source: "React Spotify Clone", target: "Portfolio" },
             { source: "React Slack Clone", target: "Portfolio" },
@@ -58,36 +95,22 @@ const Projects = ({onClickNode}:Props) => {
             { source: "Cryptography Mini System", target: "College Performance" },
             { source: "Cryptography Mini System", target: "University financial tool" },
             { source: "College Performance", target: "University financial tool" },
-        ],
+            */
+        ,
     };
-  
-    const focus = 1.4;
-    const size = 420;
-  
-    const config = {
-        nodeHighlightBehavior: true,
-        node: {
-            color: "darkorange",
-            size: size,
-            highlightStrokeColor: "orange",
-        },
-        link: {
-            highlightColor: "darkgray",
-        },
-        directed:true,
-        focusZoom:focus,
-    };
-  
     
     return(
         <div id={styles.graph}>
             <div id={styles.innerGraph}>
+                { 
                 <Graph
                     id="graph-id"
                     data={data}
                     config={config}
                     onClickNode={onClickNode}                
                 />
+                }
+                
             </div>
         </div>
     )
