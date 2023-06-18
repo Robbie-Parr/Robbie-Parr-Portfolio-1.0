@@ -2,6 +2,12 @@
     width: 100%;
     height: 10%;
     padding: 1%;
+    @media (max-width: 570px) {
+        flex-direction: column;
+    }
+    @media (min-width: 580px) {
+        flex-direction: row;
+    }
 }
 
 .header_image{
@@ -15,21 +21,44 @@
         @media (max-width: 570px) {//(min-width: 480px) {
             height: 70px;
             width: 70px;
-            
+            //margin-top:30%;
             margin-right: 10%;
             padding-left: -1%;
+            //position: absolute;
+            opacity: 0;
+            position: absolute;
+            z-index:-1;
+
         }
 
         @media (min-width: 580px) {
             height: 100px;
             width: 100px;
-            
+            //margin-top:0;
             margin-right: 10%;
             padding-left: -1%;
         }
     }
 }
 
+#lower_header_image{
+    margin:10%;
+    margin-left:35%;
+    //border-radius: 1000px;
+    @media (max-width: 570px) {//(min-width: 480px) {
+        > img{
+            height:60%;
+            width:60%;
+            border-radius: 50%;
+        }
+    }
+
+    @media (min-width: 580px) {
+        opacity: 0;
+        z-index:-1;
+        position: absolute;
+    }
+}
 
 #header_icon_section{
     display: flex;
@@ -43,6 +72,13 @@
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     padding: 20px;
+    @media (max-width: 570px) {//(min-width: 480px) {
+        //margin-bottom:50%;
+    }
+
+    @media (min-width: 580px) {
+        
+    }
 }
 
 #vital_icons{

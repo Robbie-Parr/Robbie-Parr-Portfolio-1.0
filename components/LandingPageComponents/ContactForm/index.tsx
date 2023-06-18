@@ -31,7 +31,7 @@ const ContactForm = ({}:Props) => {
             <div id={styles.main_body}>
                 <h4>
                     If I have a skill you're looking for, or I need to learn a skill for you
-                    <span>Get in contact</span>
+                    <br/><span className="p-1 text-bold">Get in contact</span>
 
                 </h4>
 

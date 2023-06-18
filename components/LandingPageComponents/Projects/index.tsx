@@ -38,13 +38,13 @@ const Projects = ({}:Props) => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                console.log(responsejson.data)
+                //console.log(responsejson.data)
                 setNodes(responsejson.data)
             }}
         fetchData();
         },[]);
 
-    console.log(nodes)
+    //console.log(nodes)
   
     return(
         <div className="" id={styles.main}>
@@ -52,7 +52,7 @@ const Projects = ({}:Props) => {
                 <h1>Projects</h1>
             </div>
 
-            <div className="flex">
+            <div className="flex" id={styles.content_section}>
                 {nodes.length>1 &&
                 <Graph 
                     onClickNode={onClickNode} 
@@ -75,7 +75,7 @@ const Projects = ({}:Props) => {
                         (
                         <div className="flex-col space-y-4" id={styles.selected_info}>
                             <p>Please select a project node from the graph on the left to view the summary.</p>
-                            <p>Currently a work in progress section...</p>
+                            <p>Currently this section is under development.</p>
                         </div>)
                     }
 

@@ -7,6 +7,17 @@
     //width: 90%;
     //background-color: whitesmoke;
     //margin-left: 5%;
-    margin-top: 1%;
+    
     border-radius: 10px;
+    > section{
+        @media (max-width: 570px) {//min-width: 480px
+            
+        }
+    
+        @media (min-width: 580px) {
+            margin-top: 1%;
+            height: 100vh;
+        }
+        
+    }
 }

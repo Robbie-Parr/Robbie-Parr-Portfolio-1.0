@@ -1,6 +1,14 @@
 #main{
     margin-left: 10%;
     padding-top:.5%;
+    @media (max-width: 570px) {//(min-width: 480px) {
+        margin-top: -30%;
+    }
+    @media (min-width: 580px) {
+        
+        
+    }
+    
 }
 
 #title{
@@ -12,7 +20,7 @@
     border-top-right-radius: 10px;
     @media (max-width: 570px) {//(min-width: 480px) {
         font-size:1.2em;
-        width:60%;
+        width:80%;
     }
 
     @media (min-width: 580px) {
@@ -35,18 +43,22 @@
 
 #card{
     //min-width: 40%;
-    min-height:50%;
+    
     background-color: grey;
     border-radius: 20px;
     margin-right:8%;
     margin-top:1%;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     @media (max-width: 570px) {//(min-width: 480px) {
-        min-width: 60%;
-
+        min-width: 80%;
+        min-height:100%;
+        //margin-bottom: 10%;
     }
     @media (min-width: 580px) {
         min-width:40%;
+        min-height:50%;
+        //padding-bottom: -20%;
+        
     }
 
     > #experience_details{

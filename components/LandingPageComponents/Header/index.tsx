@@ -11,7 +11,7 @@ type Props = {}
 
 const Header = ({}:Props) => {
     return(
-        <div className="text-center flex flex-row w-full" id={styles.header}>
+        <div className="text-center flex w-full" id={styles.header}>
             <div className={styles.header_image}>
                 <img src="/Logo.png"/>
             </div>
@@ -25,6 +25,10 @@ const Header = ({}:Props) => {
                     <MeetupIcon/>
                     <BlogIcon/>
                 </div>
+            </div>
+
+            <div className="" id={styles.lower_header_image}>
+                <img src="/Logo.png"/>
             </div>
         </div>
     )
