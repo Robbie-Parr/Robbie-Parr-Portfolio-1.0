@@ -14,8 +14,7 @@ const getData = async (req, res) => {
                 "How to build a client facing ReactJS/Next.Js web application.",
                 "Agile methodologies",
                 "Working in a team of Junior Software/Aspiring Full Stack Developers",
-                "Identifying the person in a team best suited to complete a task to the highest quality",
-                "Github, as used in industry, including rebasing",
+                "GitHub",
             ],
             references:null,
         },
@@ -35,10 +34,6 @@ const getData = async (req, res) => {
             key_takeaways:[
                 "What it's like to be in a leadership role",
                 "Importance of good relationships with society members and members of small businesses",
-                "What it's like to have to go off incomplete information, with no point of contact to get clarifications",
-                "What it's like for members of a team to leave/delay work for an extended period of time, how it impacts workload for the rest of a team",
-                "How lenient/strict a leader can be when there are hard and soft deadlines",
-                "Balancing University life while effectively running a organisation",
             ],
             references:null,
         },
@@ -51,22 +46,20 @@ const getData = async (req, res) => {
             Ensuring a excellent customer experience.`,
             key_takeaways:[
                 "Customer facing interaction",
-                "Money handling",
-                "Understanding GUI systems and what features are required, understanding that the GUI must hide the \"technical jargon\” related to the processing of data and the inner workings of the system and connected devices",
+                "An understanding of till GUI and the importance of having an interface that is clear and concise, abstracting away the low level \"technical jargon\" staff don't need to know to operate the system",
             ],
             references:null,
         },
         {
             establishment:"Shelton Development Services (Cranleigh)",
-            job_title:"Work experience as a Software Developer",
+            job_title:"Work experience, Software Developer",
             dates:"31 July – 4 August 2017",
             details:`One-week work experience writing software 
             using Python, Pygame, HTML and CSS to recreate a licence system for the company's 
             software products.`,
             key_takeaways:[
                 "How to work effectively and efficiently as part of a team",
-                "How to communicate and ask for help in a team of Software Developers",
-                "The branches of different avenues available for Software Developers",
+                "How to collaborate and ask for help in a team of Software Developers",
             ],
             references:null,
         },
