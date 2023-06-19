@@ -1,8 +1,7 @@
 import React from "react"
 
-type Props = {}
 
-const ProjectPageComponents = ({}:Props) => {
+const ProjectPageComponents = () => {
     return(
         <div className="text-center bg-white">
             <h1>The Project Page, where I show off my projects is not ready yet...</h1>

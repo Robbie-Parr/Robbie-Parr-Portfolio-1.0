@@ -7,9 +7,8 @@ import BlogIcon from "./BlogIcon";
 
 import styles from '@/styles/Header.module.scss';
 
-type Props = {}
 
-const Header = ({}:Props) => {
+const Header = () => {
     return(
         <div className="text-center flex w-full" id={styles.header}>
             <div className={styles.header_image}>

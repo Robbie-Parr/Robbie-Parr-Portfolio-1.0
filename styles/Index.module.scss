@@ -1,19 +1,6 @@
-#main{
-    //background-image: url("/TextureBackground02.png");
-
-}
-
 #text_section{
-    //width: 90%;
-    //background-color: whitesmoke;
-    //margin-left: 5%;
-    
     border-radius: 10px;
-    > section{
-        @media (max-width: 570px) {//min-width: 480px
-            
-        }
-    
+    > section{    
         @media (min-width: 580px) {
             margin-top: 1%;
             height: 100vh;

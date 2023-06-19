@@ -6,9 +6,7 @@ import styles from '@/styles/ProjectSection.module.scss';
 import Graph from "./Graph";
 
 
-type Props = {}
-
-const Projects = ({}:Props) => {
+const Projects = () => {
     const [selectedNode,setSelectedNode] = useState("")
     const [nodes,setNodes] = useState([{
         id:"",
@@ -38,13 +36,11 @@ const Projects = ({}:Props) => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                //console.log(responsejson.data)
+                
                 setNodes(responsejson.data)
             }}
         fetchData();
         },[]);
-
-    //console.log(nodes)
   
     return(
         <div className="" id={styles.main}>

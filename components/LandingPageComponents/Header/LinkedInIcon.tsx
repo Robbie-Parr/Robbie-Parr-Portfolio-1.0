@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import styles from '@/styles/Header.module.scss';
 
-type Props = {}
 
-const LinkedInIcon = ({}:Props) => {
+
+const LinkedInIcon = () => {
     return(
         <a href="https://www.linkedin.com/in/robbie-parr/">
             <div className={styles.LinkedIn_icon}>

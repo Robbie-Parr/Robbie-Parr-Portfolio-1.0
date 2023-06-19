@@ -5,9 +5,7 @@ import styles from '@/styles/Experience.module.scss';
 
 import Card from "./Card";
 
-type Props = {};
-
-const Carousel = ({}:Props) => {
+const Carousel = () => {
     const [experiences,setExperiences] = useState([])
 
     useEffect(() => {
@@ -25,7 +23,7 @@ const Carousel = ({}:Props) => {
         fetchData();
         },[]);
     
-        //console.log(experiences)
+        
 
     return(
         <div id={styles.carousel}>

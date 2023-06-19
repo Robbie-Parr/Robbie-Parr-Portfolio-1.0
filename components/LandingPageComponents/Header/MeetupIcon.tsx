@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMeetup } from '@fortawesome/free-brands-svg-icons';
 import styles from '@/styles/Header.module.scss';
 
-type Props = {}
 
-const MeetupIcon = ({}:Props) => {
+const MeetupIcon = () => {
     return(
         <a href="https://www.meetup.com/en-AU/parr-ty-events/">
             <div className={styles.Meetup_icon}>

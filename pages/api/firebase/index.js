@@ -22,12 +22,13 @@ const db = app.firestore();
 
 
 const request = async (collection,document,collection2,document2) => {
-    if(document==undefined){
-        return((await db.collection(collection).get()).docs.map(doc => {let id=doc.id; let data = doc.data();return({id:id,data:data})}))
-    }else if(collection2==undefined && document2==undefined){
-        return(await (await getDoc(doc(db,collection,document))).data())
+  //todo: modify this function
+    if(!document){
+        return (await db.collection(collection).get()).docs.map(doc => {let id=doc.id; let data = doc.data();return({id:id,data:data})})
+    }else if(!collection2 && !document2){
+        return (await getDoc(doc(db,collection,document))).data()
     }else{
-        return(await (await getDoc(doc(db,collection,document,collection2,document2))).data())
+        return (await getDoc(doc(db,collection,document,collection2,document2))).data()
     }
 }
 
