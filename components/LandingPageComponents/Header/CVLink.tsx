@@ -3,11 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import styles from '@/styles/Header.module.scss';
 
-type Props = {}
 
-const CVLink = ({}:Props) => {
+const CVLink = () => {
     return(
-        <a href="/CV.pdf" download>
+        <a href="/CVRobbieParr.pdf" download>
             <div className={styles.CV_Icon}>
                 <h2>CV</h2>
             </div>

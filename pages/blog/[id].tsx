@@ -7,7 +7,7 @@ const Page = () => {
   const {id} = router.query;
   return(
     <>
-      {/*h1>Blog id:{id}</h1>*/}
+      {/*todo: add blog root using Blog id:{id}*/}
       <h4>This page is in development</h4>
       <a href="../">
         <h2>{"<- Back"}</h2>

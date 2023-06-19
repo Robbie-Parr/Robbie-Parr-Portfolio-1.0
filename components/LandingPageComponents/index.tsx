@@ -6,9 +6,7 @@ import Experience from "./Experience"
 import Projects from "./Projects"
 import ContactForm from "./ContactForm"
 
-type Props = {}
-
-const LandingPageComponents = ({}:Props) => {
+const LandingPageComponents = () => {
     return(
         <div className="text-center">
             <h1>LandingPageComponents</h1>

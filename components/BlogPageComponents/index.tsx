@@ -1,8 +1,7 @@
 import React from "react"
 
-type Props = {}
 
-const BlogPageComponents = ({}:Props) => {
+const BlogPageComponents = () => {
     return(
         <div className="text-center bg-white">
             <h1>The Blog Page isn't ready yet...</h1>
