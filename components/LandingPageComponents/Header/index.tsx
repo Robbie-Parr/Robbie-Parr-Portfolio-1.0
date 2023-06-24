@@ -4,7 +4,7 @@ import LinkedInIcon from "./LinkedInIcon";
 import CVLink from "./CVLink"
 import MeetupIcon from "./MeetupIcon";
 import BlogIcon from "./BlogIcon";
-import GithubIcon from "./GitHubIcon";
+import GitHubIcon from "./GitHubIcon";
 import LogoIcon from "./LogoIcon"
 
 import styles from '@/styles/Header.module.scss';
@@ -25,7 +25,7 @@ const Header = () => {
                 </div>
                 <div className="flex gap-x-3" id={styles.nonvital_icons}>
                     <MeetupIcon/>
-                    <GithubIcon/>
+                    <GitHubIcon/>
                     <BlogIcon/>
                 </div>
             </div>
