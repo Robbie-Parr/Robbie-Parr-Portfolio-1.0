@@ -4,6 +4,8 @@ import LinkedInIcon from "./LinkedInIcon";
 import CVLink from "./CVLink"
 import MeetupIcon from "./MeetupIcon";
 import BlogIcon from "./BlogIcon";
+import GithubIcon from "./GitHubIcon";
+import LogoIcon from "./LogoIcon"
 
 import styles from '@/styles/Header.module.scss';
 
@@ -13,7 +15,7 @@ const Header = () => {
         <div className="text-center flex w-full" id={styles.header}>
             {/* todo: Change "Logo" Image into a interactive object simulating a coin*/}
             <div className={styles.header_image}>
-                <img src="/Logo.png"/>
+                <LogoIcon/>
             </div>
 
             <div className="gap-x-5" id={styles.header_icon_section}>
@@ -23,12 +25,13 @@ const Header = () => {
                 </div>
                 <div className="flex gap-x-3" id={styles.nonvital_icons}>
                     <MeetupIcon/>
+                    <GithubIcon/>
                     <BlogIcon/>
                 </div>
             </div>
 
             <div className="" id={styles.lower_header_image}>
-                <img src="/Logo.png"/>
+                <LogoIcon/>
             </div>
         </div>
     )
