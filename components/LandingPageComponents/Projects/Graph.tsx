@@ -29,7 +29,6 @@ const Projects = ({onClickNode,nodeIds,links}:Props) => {
         focusZoom:focus,
     };
 
-    
     let graphLinks = [{source:"",target:""}]
     graphLinks = [...links.map(({source1,targets}) => 
         targets.map(id => ({ source: source1, target: id }))

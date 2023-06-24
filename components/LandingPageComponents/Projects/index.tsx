@@ -36,7 +36,6 @@ const Projects = () => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                
                 setNodes(responsejson.data)
             }}
         fetchData();

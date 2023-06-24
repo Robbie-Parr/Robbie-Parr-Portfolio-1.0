@@ -24,7 +24,7 @@ const Carousel = () => {
         fetchData();
         },[]);
     
-     
+        
 
     return(
         <div id={styles.carousel}>

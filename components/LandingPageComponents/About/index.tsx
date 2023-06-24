@@ -8,8 +8,7 @@ import styles from '@/styles/About.module.scss';
 const About = () => {
 
 
-    
-    const [list,setList] = useState({images:[],text:["You may not be able to connect to the database.","Please wait for this informaqtion to load.", "If this issue persists, check your internet connection and or get in contact."]})
+    const [list,setList] = useState({images:[],text:["You may not be able to connect to the database.","Please wait for this information to load.", "If this issue persists, check your internet connection and or get in contact."]})
 
 
     useEffect(() => {
@@ -22,7 +21,6 @@ const About = () => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                
                 setList(responsejson.data)
             }}
         fetchData();

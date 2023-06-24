@@ -21,12 +21,11 @@ if(firebase.apps.length===0){
 const db = app.firestore();
 
 
-
 const request = async (...args) => {
-    if(args.length==1){
-      return getAllCollectionDocs(getCollection(db,args[0]))
-    }else {
-      return getDocument(db,...args)
+  if(args.length==1){
+    return getAllCollectionDocs(getCollection(db,args[0]))
+  }else {
+    return getDocument(db,...args)
     }
 }
 
