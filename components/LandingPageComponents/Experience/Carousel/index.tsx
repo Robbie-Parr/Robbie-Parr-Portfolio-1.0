@@ -7,7 +7,15 @@ import Card from "./Card";
 
 
 const Carousel = () => {
-    const [experiences,setExperiences] = useState([])
+    const [experiences,setExperiences] = useState([
+        {id:"Loading Card", data:{
+            description:"Details are loading",
+            job_title:"Job title section",
+            start_end_date:"then - now",
+            key_takeaways:["You may not be able to connect to the database"],
+            references:["Ask me in the form to send you thins information if this issue persists"]
+        }}
+    ])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,13 +26,12 @@ const Carousel = () => {
                 }
             })
             if(response.status !==404){
-                const responsejson = await ( await response).json()
+                const responsejson = await (response).json()
                 setExperiences(responsejson.data.reverse())
             }}
         fetchData();
         },[]);
-    
-        
+
 
     return(
         <div id={styles.carousel}>
