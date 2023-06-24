@@ -1,13 +1,17 @@
 import React from "react"
+import Head from 'next/head';
 
 import styles from '@/styles/Index.module.scss';
 
+
 import {Header,About,Experience,Projects,ContactForm} from "../components/LandingPageComponents"
-import Link from "next/link";
+import Title from "../components/Title";
 
 const Home = () => {
   return(
     <div className="h-screen snap-y snap-mandatory overflow-scroll z-0" id={styles.main}>
+        <Title pageTitle="Portfolio"/>
+        
 
         <div className="z-1 snap-start">
           <Header />

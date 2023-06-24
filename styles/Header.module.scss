@@ -10,10 +10,24 @@
     }
 }
 
+.Logo_Icon{
+    @media (max-width: 570px) {
+        
+    }
+
+    @media (min-width: 580px) {
+       
+    }
+    
+}
+
 .header_image{
     flex:.2;
     padding-left: 5%;
-    > img{
+    > .Logo_Icon{
+        padding-left:5%;
+        padding-right:5%;
+    > a > img{
         height:100px;
         width:100px;
         border-radius: 100px;
@@ -33,20 +47,25 @@
             height: 100px;
             width: 100px;
             margin-right: 10%;
-            padding-left: -1%;
+            
         }
     }
 }
+}
 
 #lower_header_image{
-    margin:10%;
-    margin-left:35%;
+    
     @media (max-width: 570px) {
-        > img{
-            height:60%;
-            width:60%;
+        > .Logo_Icon{
+            padding:20%;
+            
+        > a > img{
+            margin-left:10%;
+            height:80%;
+            width:80%;
             border-radius: 50%;
         }
+    }
     }
 
     @media (min-width: 580px) {
@@ -80,6 +99,16 @@
 
 .LinkedIn_icon{
     background-color: #0072b1;
+    padding:8px;
+    border-radius: 10px;
+    height:40px;
+    width:40px;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.Github_icon{
+    background-color: black;
     padding:8px;
     border-radius: 10px;
     height:40px;
