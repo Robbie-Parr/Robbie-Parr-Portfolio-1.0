@@ -38,13 +38,12 @@ const Projects = ({}:Props) => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                console.log(responsejson.data)
                 setNodes(responsejson.data)
             }}
         fetchData();
         },[]);
 
-    console.log(nodes)
+  
   
     return(
         <div className="" id={styles.main}>
@@ -75,7 +74,8 @@ const Projects = ({}:Props) => {
                         (
                         <div className="flex-col space-y-4" id={styles.selected_info}>
                             <p>Please select a project node from the graph on the left to view the summary.</p>
-                            <p>Currently a work in progress section...</p>
+                            <p>The graph nodes are linked depending on their influence/impact on other projects. For instance my React projects are all linked to my Portfolio, as I made/making the Portfolio with technical skills used in these projects.</p>
+                            <p>I am currently woking on improving this section</p>
                         </div>)
                     }
 

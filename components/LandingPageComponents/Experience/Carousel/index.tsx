@@ -8,7 +8,15 @@ import Card from "./Card";
 type Props = {};
 
 const Carousel = ({}:Props) => {
-    const [experiences,setExperiences] = useState([])
+    const [experiences,setExperiences] = useState([
+        {id:"Loading Card", data:{
+            description:"Details are loading",
+            job_title:"Job title section",
+            start_end_date:"then - now",
+            key_takeaways:["You may not be able to connect to the database"],
+            references:["Ask me in the form to send you thins information if this issue persists"]
+        }}
+    ])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,25 +28,25 @@ const Carousel = ({}:Props) => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                setExperiences(responsejson.data)
+                setExperiences(responsejson.data.reverse())
             }}
         fetchData();
         },[]);
     
-        console.log(experiences)
+       
 
     return(
         <div id={styles.carousel}>
             
-            {experiences?.map( ({establishment,job_title,dates,details,key_takeaways,references}) => 
+            {experiences?.map( ({id,data}) => 
                 <Card 
-                    key={establishment+job_title}
-                    establishment={establishment} 
-                    job_title={job_title}
-                    dates={dates}
-                    details={details}
-                    key_takeaways={key_takeaways}
-                    references={references}
+                    key={id+data.job_title}
+                    establishment={id} 
+                    job_title={data.job_title}
+                    dates={data.start_end_date}
+                    details={data.description}
+                    key_takeaways={data.key_takeaways}
+                    references={data.references}
                     />
             )}
             

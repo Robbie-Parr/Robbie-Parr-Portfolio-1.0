@@ -7,8 +7,8 @@ type Props = {
     job_title:String,
     dates:String,
     details:String,
-    key_takeaways:[string],
-    references:[string]
+    key_takeaways:string[],
+    references:string[]
 }
 
 const Card = ({establishment,
