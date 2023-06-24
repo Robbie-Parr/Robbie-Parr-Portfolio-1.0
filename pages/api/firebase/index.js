@@ -21,15 +21,30 @@ if(firebase.apps.length===0){
 const db = app.firestore();
 
 
-const request = async (collection,document,collection2,document2) => {
-  //todo: modify this function
-    if(!document){
-        return (await db.collection(collection).get()).docs.map(doc => {let id=doc.id; let data = doc.data();return({id:id,data:data})})
-    }else if(!collection2 && !document2){
-        return (await getDoc(doc(db,collection,document))).data()
-    }else{
-        return (await getDoc(doc(db,collection,document,collection2,document2))).data()
+const request = async (...args) => {
+  if(args.length==1){
+    return getAllCollectionDocs(getCollection(db,args[0]))
+  }else {
+    return getDocument(db,...args)
     }
 }
 
-export {db, request};
+const getCollection = async (db,collectionName) => {
+  return await (db.collection(collectionName).get())
+}
+
+const getAllCollectionDocs = async (collection) => {
+  return (await collection).docs.map(doc => {let id=doc.id; let data = doc.data();return({id:id,data:data})})
+}
+
+const getDocument = async (db,...args) => {
+  return (await getDoc(doc(db,...args))).data()
+}
+
+
+const logReq = (...args) => {
+  console.log(args.length)
+  console.log(args)
+}
+
+export {db,request};
