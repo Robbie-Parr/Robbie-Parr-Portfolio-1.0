@@ -35,6 +35,7 @@ const Projects = ({onClickNode,nodeIds,links}:Props) => {
         targets.map(id => ({ source: source1, target: id }))
         )].flat(1)
     
+
     
     const data = {
         nodes: 

@@ -3,6 +3,7 @@ import {db,request} from "./firebase"
 const getData = async (req, res) => {
     const data = await request("about_me","details");
 
+
     res.status(200).json({data});
 }
 

@@ -5,6 +5,7 @@ import styles from '@/styles/Experience.module.scss';
 
 import Card from "./Card";
 
+
 const Carousel = () => {
     const [experiences,setExperiences] = useState([])
 
@@ -18,25 +19,25 @@ const Carousel = () => {
             })
             if(response.status !==404){
                 const responsejson = await ( await response).json()
-                setExperiences(responsejson.data)
+                setExperiences(responsejson.data.reverse())
             }}
         fetchData();
         },[]);
     
-        
+     
 
     return(
         <div id={styles.carousel}>
             
-            {experiences?.map( ({establishment,job_title,dates,details,key_takeaways,references}) => 
+            {experiences?.map( ({id,data}) => 
                 <Card 
-                    key={establishment+job_title}
-                    establishment={establishment} 
-                    job_title={job_title}
-                    dates={dates}
-                    details={details}
-                    key_takeaways={key_takeaways}
-                    references={references}
+                    key={id+data.job_title}
+                    establishment={id} 
+                    job_title={data.job_title}
+                    dates={data.start_end_date}
+                    details={data.description}
+                    key_takeaways={data.key_takeaways}
+                    references={data.references}
                     />
             )}
             
