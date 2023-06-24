@@ -9,7 +9,8 @@ const Home = () => {
   return(
     <div className="h-screen snap-y snap-mandatory overflow-scroll z-0" id={styles.main}>
 
-        {/* Header section*/}
+        {/* todo: add header for title and "logo" image */}
+        
         <div className="z-1 snap-start">
           <Header />
         </div>

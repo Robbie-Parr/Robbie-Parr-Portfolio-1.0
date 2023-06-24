@@ -21,14 +21,43 @@ if(firebase.apps.length===0){
 const db = app.firestore();
 
 
-const request = async (collection,document,collection2,document2) => {
-    if(document==undefined){
-        return((await db.collection(collection).get()).docs.map(doc => {let id=doc.id; let data = doc.data();return({id:id,data:data})}))
-    }else if(collection2==undefined && document2==undefined){
-        return(await (await getDoc(doc(db,collection,document))).data())
+const request = async (...args) => {
+  //todo: modify this function
+  //
+  //collection,document,collection2,document2
+    if(args.length==1){//!document){
+      logReq(args[0])
+      return getAllCollectionDocs(getCollection(db,args[0]))
+        //return (await db.collection(collection).get()).docs.map(doc => {let id=doc.id; let data = doc.data();return({id:id,data:data})})
+    }else {
+      return getDocument(db,...args)
+    }/* if(!collection2 && !document2){
+      logReq(collection,document)
+      return getDoc
+        //return (await getDoc(doc(db,collection,document))).data()
     }else{
-        return(await (await getDoc(doc(db,collection,document,collection2,document2))).data())
-    }
+      logReq(collection,document,collection2,document2)
+        //return (await getDoc(doc(db,collection,document,collection2,document2))).data()
+    }*/
 }
 
-export {db, request};
+const getCollection = async (db,collectionName) => {
+  return(await (db.collection(collectionName).get()))
+}
+
+const getAllCollectionDocs = async (collection) => {
+  return collection.docs.map(doc => {let id=doc.id; let data = doc.data();return({id:id,data:data})})
+}
+
+const getDocument = async (db,...args) => {
+  return (await getDoc(doc(db,...args))).data()
+}
+
+
+const logReq = (...args) => {
+  console.log(args.length)
+  console.log(args)
+  
+}
+
+export {db,request};

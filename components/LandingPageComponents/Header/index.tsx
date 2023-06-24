@@ -11,7 +11,8 @@ type Props = {}
 
 const Header = ({}:Props) => {
     return(
-        <div className="text-center flex flex-row w-full" id={styles.header}>
+        <div className="text-center flex w-full" id={styles.header}>
+            {/* todo: Change "Logo" Image into a interactive object simulating a coin*/}
             <div className={styles.header_image}>
                 <img src="/Logo.png"/>
             </div>

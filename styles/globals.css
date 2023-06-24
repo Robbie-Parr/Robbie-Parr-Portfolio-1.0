@@ -4,6 +4,7 @@
 
 body{
     background-image: url("/TextureBackground03.png");
+    viewport-fit: full;
 }
 
 /*Tailwind overrides */
