@@ -9,7 +9,7 @@ import Title from "../components/Title";
 
 const Home = () => {
   return(
-    <div className="h-screen snap-y snap-mandatory overflow-scroll z-0" id={styles.main}>
+    <div className="h-screen snap-y snap-mandatory z-0" id={styles.main}>
         <Title pageTitle="Portfolio"/>
         
 

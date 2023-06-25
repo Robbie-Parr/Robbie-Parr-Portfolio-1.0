@@ -35,12 +35,13 @@ const Projects = () => {
                 }
             })
             if(response.status !==404){
-                const responsejson = await ( await response).json()
+                const responsejson = await (response).json()
                 setNodes(responsejson.data)
             }}
         fetchData();
         },[]);
   
+    
     return(
         <div className="" id={styles.main}>
             <div id={styles.title}>

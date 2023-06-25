@@ -20,7 +20,7 @@ const About = () => {
                 }
             })
             if(response.status !==404){
-                const responsejson = await ( await response).json()
+                const responsejson = await (response).json()
                 setList(responsejson.data)
             }}
         fetchData();
