@@ -228,7 +228,7 @@
     #innerGraph{
         background-color:whitesmoke;
         
-        min-width:100%;
+        //min-width:100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         padding:.5%;
@@ -236,12 +236,20 @@
         > div > svg {
             min-width:100%;
         }
-        
+
+        @media (max-width: 570px) {
+            max-width:96%;
+            
+        }
+        @media (min-width: 580px) {
+            max-width:99%;
+        }
     }
 }
 
 #selected{
     min-width:90%;
+    
     background-color: rgba(0, 0, 0, 0.514);
     > #selected_title{
         align-self: center;
@@ -305,12 +313,18 @@
 
     }
     padding:1%;
-    margin:1%;
+    margin-top:1%;
+    margin-right:1%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     @media (max-width: 570px) {
         margin-top:1%;
         padding-bottom: 8%;
+        max-width:96%;
+
+    }
+    @media (min-width:580px){
+        max-width:99%;
     }
 
 

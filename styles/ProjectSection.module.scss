@@ -14,7 +14,7 @@
 
         @media (max-width: 570px) {
             font-size:1.2em;
-            width:100%;
+            width:96%;
         }
     
         @media (min-width: 580px) {
@@ -31,19 +31,19 @@
     > #innerGraph{
         background-color:whitesmoke;
         flex:.6;
-        max-width: 58%;
-    
         
         padding:.5%;
 
-        max-width:100%;
+        
         @media (max-width: 570px) {
+            max-width:96%;
             left:80%;
             > div > svg {
                 max-width:100%;
             }
         }
         @media (min-width: 580px) {
+            max-width:100%;
             border-bottom-left-radius: 10px;
             left:0;
             > div > svg {
@@ -132,7 +132,7 @@
 
     }
     @media (max-width: 570px) {
-        min-width:90%;
+        max-width:96%;
         flex:.8;
         margin-top:1%;
         border-bottom-right-radius: 10px;
