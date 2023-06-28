@@ -4,7 +4,7 @@ import LinkedInIcon from "./LinkedInIcon";
 import CVLink from "./CVLink"
 import MeetupIcon from "./MeetupIcon";
 import BlogIcon from "./BlogIcon";
-import GitHubIcon from "./GitHubIcon";
+import GitHubIcon from "./GithubIcon";
 import LogoIcon from "./LogoIcon"
 
 import styles from '@/styles/Header.module.scss';
