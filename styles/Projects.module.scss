@@ -233,16 +233,20 @@
         border-top-right-radius: 10px;
         padding:.5%;
         
-        > div > svg {
-            min-width:100%;
-        }
+        
 
         @media (max-width: 570px) {
             max-width:96%;
+            > div > svg {
+                max-width:100%;
+            }
             
         }
         @media (min-width: 580px) {
             max-width:99%;
+            > div > svg {
+                max-width:100%;
+            }
         }
     }
 }
