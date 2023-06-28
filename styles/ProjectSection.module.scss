@@ -74,8 +74,11 @@
         vertical-align: center;
         place-items: center;
         
+        flex-direction: row;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         > h1{
+            flex:.8;
             @media (max-width: 570px) {
                 font-size:1em;
             }
@@ -85,7 +88,32 @@
             }
         }
 
-        background-color: rgba(128, 128, 128, 0.5);
+        > #toSelected{
+            flex:.2;
+            background-image: url("/TextureBackground03.png");
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding:1%;
+            border-radius: 10px;
+            margin-left:5%;
+
+            @media (max-width: 570px) {
+                font-size:.8em;
+                
+            }
+        
+            @media (min-width: 580px) {
+                font-size:1em;
+                
+            }
+
+        }
+
+        > #toSelected:hover{
+            background-image: url("/TextureBackground01.png");
+        }
+
+        background-color: rgba(128, 128, 128, 0.288);
+        
         color:whitesmoke;
         flex:.2;
         
@@ -122,8 +150,8 @@
         margin:1%;
         flex:.8;
         margin-top:1%;
-        background-color: rgba(245, 245, 245, 0.658);
-        
+        background-color: rgba(245, 245, 245, 0.815);
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
         border-bottom-right-radius: 10px;
         @media (max-width: 570px) {
@@ -136,6 +164,7 @@
             padding:2%;
         }
     }
+
 }
 
 #main{

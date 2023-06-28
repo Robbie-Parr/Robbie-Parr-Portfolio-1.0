@@ -66,12 +66,13 @@ const Page = () => {
       <div id={styles.header}>
         <div className="flex" style={{backgroundImage:"url("+node?.cover_image+")"}}>
           <div>
-            <a href="../" className="">
+            <a href="../projects" className="">
               <FontAwesomeIcon icon={faArrowAltCircleLeft} size="xl" />
             </a>
           </div>
           <div/>
         </div>
+        
         <div className="flex">
           <h1 className="m-4 p-2">{id}</h1>
             <div id={styles.first_section}>
@@ -83,7 +84,7 @@ const Page = () => {
       
       
 
-      {/* Map through Skills*/}
+      {/* todo: Map through Skills*/}
 
 
       {(combine_Text_and_Image(node?.text_sections,node?.image_links)).map(

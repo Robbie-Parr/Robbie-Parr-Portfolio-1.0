@@ -100,10 +100,9 @@
             min-width:60%;
             background-color: whitesmoke;
             margin-left:.5%;
-            
-            padding:1%;
             > p{
-                margin:2%;
+                margin:1%;
+                margin-bottom: 2%;
             }
         }
     }
@@ -170,4 +169,188 @@
     }
 
     
+}
+
+#root{
+    > #header{
+    color:whitesmoke;
+    @media (max-width: 570px) {
+        font-size:1.2em;
+    }
+
+    @media (min-width: 580px) {
+        font-size:2em;
+    }
+
+    > div > div {
+        flex:.03;
+        padding-left:.5%;
+        padding-top:.5%;
+        padding-bottom: 20%;
+
+        > a {
+            color: rgba(253, 101, 0, 0.349);
+        }
+
+        > a:hover{
+            color:rgba(255, 255, 255, 0.8)
+        }
+    }
+
+    > div > h1{
+        width:98%;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+        border-bottom-left-radius: 10px;
+        @media (max-width: 570px) {
+            margin-top:-8%;
+        }
+    
+        @media (min-width: 580px) {
+            margin-top:-4%;
+        }
+    }
+    }
+
+    > h4 {
+        opacity: 0;
+    }
+
+    
+
+    > section{    
+            margin-top: 1%;
+            margin-bottom: 10%;
+            min-width:100%;
+    }
+
+    #graph{
+        min-width:100%;
+    #innerGraph{
+        background-color:whitesmoke;
+        
+        min-width:100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding:.5%;
+        
+        > div > svg {
+            min-width:100%;
+        }
+        
+    }
+}
+
+#selected{
+    min-width:90%;
+    background-color: rgba(0, 0, 0, 0.514);
+    > #selected_title{
+        align-self: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+        vertical-align: center;
+        place-items: center;
+        
+        flex-direction: row;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        > h1{
+            flex:.8;
+            @media (max-width: 570px) {
+                font-size:1em;
+            }
+        
+            @media (min-width: 580px) {
+                font-size:2em;
+            }
+        }
+
+        > #toSelected{
+            flex:.4;
+            background-image: url("/TextureBackground03.png");
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding:1%;
+            border-radius: 10px;
+            margin-left:5%;
+
+            @media (max-width: 570px) {
+                font-size:.8em;
+                
+            }
+        
+            @media (min-width: 580px) {
+                font-size:1em;
+                
+            }
+        }
+
+        > #toSelected:hover{
+            background-image: url("/TextureBackground01.png");
+        }
+
+        background-color: rgba(128, 128, 128, 0.288);
+        
+        color:whitesmoke;
+        
+        height:25%;
+        padding:2%;
+        margin:1%;
+
+        @media (max-width: 570px) {
+            min-width:80%;
+        }
+
+    }
+    padding:1%;
+    margin:1%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @media (max-width: 570px) {
+        margin-top:1%;
+        padding-bottom: 8%;
+    }
+
+
+    > #selected_info{
+        margin:1%;
+        flex:.8;
+        margin-top:1%;
+        background-color: rgba(245, 245, 245, 0.815);
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        @media (max-width: 570px) {
+            font-size:.8em;
+            
+            padding:1%
+        }
+        @media (min-width: 580px) {
+            font-size:1em;
+            padding:2%;
+        }
+    }
+
+}
+
+#graph_main{
+    padding-left:1%;
+    padding-right:1%;
+    
+}
+}
+
+#carousel{
+    overflow-x:scroll;
+    display: flex;
+    min-height: 70%;
+    min-width:100%;
+    
+}
+
+#carousel::-webkit-scrollbar {
+    display: none;
 }
