@@ -1,6 +1,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import { doc, getDoc } from "firebase/firestore";
+import { getStorage,ref, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: process.env.API_KEY,
@@ -19,6 +20,8 @@ if(firebase.apps.length===0){
 }
 
 const db = app.firestore();
+
+const storage = getStorage(app);
 
 
 const request = async (...args) => {
@@ -47,4 +50,10 @@ const logReq = (...args) => {
   console.log(args)
 }
 
-export {db,request};
+const imageRequest = async (...args) => {
+  let root = args.join("/");
+  const url = await getDownloadURL(ref(storage,root));
+  return url
+}
+
+export {db,request,imageRequest};
