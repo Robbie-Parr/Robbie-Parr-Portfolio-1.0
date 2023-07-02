@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React from "react";
 
 import LinkedInIcon from "./LinkedInIcon";
 import CVLink from "./CVLink"
@@ -16,15 +16,6 @@ import styles from '@/styles/Header.module.scss';
 
 
 const Header = () => {
-    const [logoURL,setLogoURL] = useState("");
-
-    useEffect(() => {
-        const result = async () => {
-            let res = await imageRequest("ProfilePicture032.png")
-            setLogoURL(res);
-        }
-        result()
-    },[])
     return(
         <div className="text-center flex w-full" id={styles.header}>
             {/* todo: Change "Logo" Image into a interactive object simulating a coin*/}
