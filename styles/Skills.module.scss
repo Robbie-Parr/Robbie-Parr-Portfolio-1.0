@@ -1,0 +1,31 @@
+#container{
+    padding-top:.1%;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 10px;
+    position: relative;
+
+    > #title{
+        margin-left:35%;
+        background-image: url("/TextureBackground01.png");
+        color:whitesmoke;
+        width:400px;
+        height:400px;
+        scale: .2;
+        border-radius: 50%;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        > p{
+            padding-top:13%;
+            scale:6;
+        }
+    }
+
+    > p{
+        position: absolute;
+        background-color: whitesmoke;
+        width:2.5%;
+        height:10%;
+        padding: .5%;
+        border-radius: 50%;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
