@@ -14,6 +14,7 @@ import styles from '@/styles/Header.module.scss';
 
 
 
+
 const Header = () => {
     const [logoURL,setLogoURL] = useState("");
 
@@ -24,7 +25,6 @@ const Header = () => {
         }
         result()
     },[])
-
     return(
         <div className="text-center flex w-full" id={styles.header}>
             {/* todo: Change "Logo" Image into a interactive object simulating a coin*/}
