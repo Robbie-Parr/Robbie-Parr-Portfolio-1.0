@@ -24,13 +24,20 @@
 .header_image{
     flex:.2;
     padding-left: 5%;
+    @media (max-width: 570px) {
+        position: absolute;
+        z-index:-1;
+    }
+
     > .Logo_Icon{
         padding-left:5%;
         padding-right:5%;
         margin: 10px;
+        
     > div {
         height:120px;
         width:120px;
+        
 
         > #icon{
         border-radius: 100px;
@@ -62,7 +69,7 @@
         > .Logo_Icon{
             padding:20%;
             
-        > a > img{
+        > div  > #icon{
             margin-left:10%;
             height:80%;
             width:80%;
