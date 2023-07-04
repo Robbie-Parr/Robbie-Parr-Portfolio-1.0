@@ -35,9 +35,9 @@
         margin: 10px;
         
     > div {
+        @media (min-width: 580px) {
         height:120px;
         width:120px;
-        
 
         > #icon{
         border-radius: 100px;
@@ -69,7 +69,7 @@
         > .Logo_Icon{
             padding:20%;
             
-        > div  > #icon{
+        > div > #icon{
             margin-left:10%;
             height:80%;
             width:80%;
