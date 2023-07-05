@@ -2,8 +2,12 @@ import React,{useEffect, useState} from "react";
 import {motion} from "framer-motion";
 
 import styles from '@/styles/Skills.module.scss';
+import SkillPoint from "./SkillPoint";
 
 const Skills = () => {
+    const [skills,setSkills] = useState([{name:"1",image:"ProfilePicture032.png"}])
+    const [variations,setVariations] = useState([30,0,0])
+
 
     function *getCirclePoint(radius:number,center:number[],increment:number,offset=0): IterableIterator<[number,number]> {
         const convert = (theta:number) =>  theta/360 * (2 * Math.PI)
@@ -113,16 +117,17 @@ const Skills = () => {
                     //Was in second 90 degrees (90 - 180)
                     flip=true
                     incrementDirection = 1
-                    xMult = -1;
+                    xMult = -1
                 }else if (xMult==-1 && yMult==-1){
                     //Was in third 90 degrees (180 - 270)
                     incrementDirection = -1
-                    yMult = 1;
+                    yMult = 1
                 }else if (xMult==-1 && yMult==1) {
                     //Was in last 90 degrees (270 - 360)
                     flip=false
                     incrementDirection = 1
-                    xMult = 1;
+                    xMult = 1
+                    radius-=10
                 }
             }
 
@@ -132,59 +137,81 @@ const Skills = () => {
     }
 
     type item = {
-        id:number
-    } | number;
+        name:string,
+        image:string,
 
-    const getNextPoints = (items:item[],iterator:IterableIterator<[number,number]>): item[][] => {
-        let data:number[][] = []
+    };
+
+    type returnObject = [item,...number[]][];
+
+    const convertToPercent = (i:number,max:number) => Math.floor(i/max * 100)
+
+    const getNextPoints = (items:item[],iterator:IterableIterator<[number,number]>,max:number[]): returnObject => {
+        let data:returnObject = []
         let quantity = items.length
         for(let i=0;i<quantity;i++){
             let value = iterator.next();
-            data.push([items[i],...value.value])
+            let transformedValues = [...value.value].map( (i,n) => convertToPercent(i,max[n]))
+            data.push([items[i],...transformedValues])
         }
         return data
     }
 
     const getDataPoints = (items:item[]) => {
-
-        let iterator = getCirclePoint(30,[700,180],360/items.length,0)
+        let iterator = getCirclePoint(variations[0],[730,200],(360/items.length)+variations[1],variations[2])
         //Creates coordinate generator
 
-        return getNextPoints(items,iterator)
+        return getNextPoints(items,iterator,[740*2,220*2])
         //Generates required coordinates and returns these to the caller
     }
     
-    
-    
+    setInterval(() => {
+        let r = Math.random()
+        if(r>.8){
+            setVariations([30,0,0])
+        }else{
+            setVariations([22+(10*Math.random()),15*Math.random(),20*Math.random()])
+        }
+    },10000)
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch("../../../../api/Skills",{
+                method:"GET",
+                headers:{
+                    "Content-Type":"application/json",
+                }
+            })
+            if(response.status !==404){
+                const responsejson = await (response).json()
+                let result = responsejson.data.map((skill:any) => {
+                    return {name:skill.id,image:skill.data.image_url}
+                })
+                setSkills([...result])
+            }}
+        fetchData();
+        },[]);
 
     return(
-        <div className="ml-4 mr-8 text-center self-center" id={styles.container}>
-            <div className="self-center" id={styles.title}>
+        <div className="text-center" id={styles.container}>
+            <div id={styles.title}>
                 <p>Skills</p>
             </div>
 
-            {/* todo: change circle center based on screen size's */}
-
-            {(getDataPoints([{id:1},
-                            {id:2},
-                            {id:3},
-                            {id:4},
-                            {id:5},
-                            {id:6},
-                            {id:7},
-                            {id:8},
-                            {id:9},
-                            {id:10},
-                            {id:11},
-                            {id:12},
-                            ])).map(i => {
+            
+            <div id={styles.skill_area}>
+            {(getDataPoints(skills)).map((i,index) => {
                 
                 let xPos = i[1]
                 let yPos = i[2]
 
-                //Ensure only atempt to get .id of i[0] value 
-                return(<p style={{top:`${yPos}px`,left:`${xPos}px`}}>{i[0].id}</p>)}
+                
+                
+                return <SkillPoint key={i[0].name} object={i[0]} yPos={yPos} xPos={xPos} index={index}/>
+            }
             )}
+            </div>
             
         </div>
     )
