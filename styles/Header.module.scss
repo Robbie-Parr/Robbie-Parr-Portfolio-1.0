@@ -27,6 +27,7 @@
     @media (max-width: 570px) {
         position: absolute;
         z-index:-1;
+        opacity: 0;
     }
 
     > .Logo_Icon{
@@ -60,8 +61,8 @@
             
         }
     }
-}}
 }
+}}}
 
 #lower_header_image{
     
