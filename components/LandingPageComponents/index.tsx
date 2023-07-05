@@ -5,6 +5,7 @@ import About from "./About"
 import Experience from "./Experience"
 import Projects from "./Projects"
 import ContactForm from "./ContactForm"
+import Skills from "./Skills"
 
 const LandingPageComponents = () => {
     return(
@@ -14,6 +15,6 @@ const LandingPageComponents = () => {
     )
 }
 
-export {Header,About,Experience,Projects,ContactForm};
+export {Header,About,Experience,Projects,ContactForm,Skills};
 
 export default LandingPageComponents;

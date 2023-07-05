@@ -4,7 +4,7 @@ import Head from 'next/head';
 import styles from '@/styles/Index.module.scss';
 
 
-import {Header,About,Experience,Projects,ContactForm} from "../components/LandingPageComponents"
+import {Header,About,Experience,Projects,ContactForm,Skills} from "../components/LandingPageComponents"
 import Title from "../components/Title";
 
 const Home = () => {
@@ -27,6 +27,10 @@ const Home = () => {
 
           <section className="snap-start" id="experience">
             <Experience/>
+          </section>
+
+          <section className="snap-start" id="skills">
+            <Skills/>
           </section>
         
           <section className="snap-start" id="projects-section">

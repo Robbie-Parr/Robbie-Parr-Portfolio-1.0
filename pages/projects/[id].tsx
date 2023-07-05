@@ -36,7 +36,7 @@ const Page = () => {
         })
         if(response.status !==404){
             const responsejson = await (response).json()
-            console.log(responsejson.data)
+            
             setNode(responsejson.data)
         }}
     fetchData();
