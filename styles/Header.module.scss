@@ -27,6 +27,7 @@
     @media (max-width: 570px) {
         position: absolute;
         z-index:-1;
+        opacity: 0;
     }
 
     > .Logo_Icon{
@@ -35,9 +36,9 @@
         margin: 10px;
         
     > div {
+        @media (min-width: 580px) {
         height:120px;
         width:120px;
-        
 
         > #icon{
         border-radius: 100px;
@@ -60,8 +61,8 @@
             
         }
     }
-}}
 }
+}}}
 
 #lower_header_image{
     
@@ -69,7 +70,7 @@
         > .Logo_Icon{
             padding:20%;
             
-        > div  > #icon{
+        > div > #icon{
             margin-left:10%;
             height:80%;
             width:80%;
