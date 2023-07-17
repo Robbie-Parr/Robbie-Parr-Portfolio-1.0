@@ -21,8 +21,6 @@ type Props = {
 const SkillPoint = ({object,yPos,xPos,index}:Props) => {
     const [inView,setInView] = useState(false)
 
-    //id={styles.skill}
-
     const [logoURL,setLogoURL] = useState("");
 
     useEffect(() => {
@@ -41,12 +39,11 @@ const SkillPoint = ({object,yPos,xPos,index}:Props) => {
             style={{width:"70px",
                     height:"70px",
                     borderRadius: "50%",
-                    padding:"1%",
                     boxShadow: "2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                     backgroundImage: `url(${logoURL})`,
                     backgroundSize:"cover",
                     zIndex: inView ? 10 : 1,
-                    position: inView ? "relative" : "absolute"
+                    position: "absolute"
                 }}
             >
             <div onClick={() => setInView(!inView)} 
@@ -54,12 +51,10 @@ const SkillPoint = ({object,yPos,xPos,index}:Props) => {
                         opacity:inView ? .8: 0,
                         width:"70px",
                         height:"70px",
-                        margin:"-38%",//"-15px",
-                        
                         borderRadius: "50%",
                         textSizeAdjust:".2",
                         zIndex: inView ? 10 : 1,
-                    position:"relative"}}
+                    position:"absolute"}}
                         
                 ><p style={{paddingTop:"30%",scale:".9"}}>{object.name}</p></div>
         </motion.div>

@@ -58,18 +58,24 @@
             margin-top:2%;
         }
         @media (max-width: 570px) {
-            width:250%;
+            width:100%;
             scale:.8;
             height:118%;
-            margin-left:-80%;
-            > div > div {
-                
-                margin-left:-20% !important;
+            
+            > div {
+                margin-left:-5% !important;
+            > div {
                 > p{
-                    margin-top:15%;
+                    @media (min-width: 580px) {
+                        margin-top:15%;
+                    }
+                    @media (max-width: 570px) {
+                        
+                    }
+                    
                     scale:.95
                 }
-            }
+            }}
         }
     }
 
@@ -77,8 +83,15 @@
 
 
 > #skill{
+    
     background-color: whitesmoke;
-    padding:1%;
+    @media (min-width: 580px) {
+        padding:1%;
+    }
+    @media (max-width: 570px) {
+        
+    }
+
     > p{
     opacity: 0;
     }
