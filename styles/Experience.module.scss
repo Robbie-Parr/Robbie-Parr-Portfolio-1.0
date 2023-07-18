@@ -33,12 +33,30 @@
     overflow-x:scroll;
     display: flex;
     min-height: 70%;
+}
+
+#carousel::-webkit-scrollbar{
+    @media (max-width: 570px) {
+        display: none;
+    }
+    @media (min-width: 580px) {
+        scroll-padding-right:10%;
+    }
     
 }
 
-#carousel::-webkit-scrollbar {
-    display: none;
-  }
+#carousel::-webkit-scrollbar-thumb{
+    background-image: url("/TextureBackground01.png");
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#carousel::-webkit-scrollbar-track {
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
 
 #card{
     
