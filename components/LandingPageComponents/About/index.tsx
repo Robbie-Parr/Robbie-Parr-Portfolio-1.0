@@ -4,31 +4,18 @@ import {useEffect, useState} from "react";
 
 import styles from '@/styles/About.module.scss';
 
+type Props = {
+    list:{
+        images:string[],
+        text:string[]
+    }
+}
 
-const About = () => {
 
-
-    const [list,setList] = useState({images:[],text:["You may not be able to connect to the database.","Please wait for this information to load.", "If this issue persists, check your internet connection and or get in contact."]})
-
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("../../../../api/About",{
-                method:"GET",
-                headers:{
-                    "Content-Type":"application/json",
-                }
-            })
-            if(response.status !==404){
-                const responsejson = await (response).json()
-                setList(responsejson.data)
-            }}
-        fetchData();
-        },[]);
-
+const About = ({list}:Props) => {
 
     if(list.text==null){
-        return(<div></div>)
+        list = {images:[],text:["You may not be able to connect to the database.","Please wait for this information to load.", "If this issue persists, check your internet connection and or get in contact."]}
     }
 
     return(
@@ -76,3 +63,4 @@ const About = () => {
 }
 
 export default About;
+

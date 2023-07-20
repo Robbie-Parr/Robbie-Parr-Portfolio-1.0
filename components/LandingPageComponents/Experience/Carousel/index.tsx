@@ -5,35 +5,27 @@ import styles from '@/styles/Experience.module.scss';
 
 import Card from "./Card";
 
+type Props = {
+    experience:{id:string, 
+    data:{
+        description:string,
+        job_title:string,
+        start_end_date:string,
+        key_takeaways:string[],
+        references:string[]
+    }}[]
+}
 
-const Carousel = () => {
-    const [experiences,setExperiences] = useState([
-        {id:"Loading Card", data:{
-            description:"Details are loading",
-            job_title:"Job title section",
-            start_end_date:"then - now",
-            key_takeaways:["You may not be able to connect to the database"],
-            references:["Ask me in the form to send you thins information if this issue persists"]
-        }}
-    ])
-
+const Carousel = ({experience}:Props) => {
+    const experiences = experience.reverse()
+    
+    const [hydrated, setHydrated] = useState(false);
     useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("../../../../api/ExperienceCarousel",{
-                method:"GET",
-                headers:{
-                    "Content-Type":"application/json",
-                }
-            })
-            if(response.status !==404){
-                const responsejson = await (response).json()
-                setExperiences(responsejson.data.reverse())
-            }}
-        fetchData();
-        },[]);
-
+        setHydrated(true);
+    },[])
 
     return(
+        <> {hydrated &&
         <div id={styles.carousel}>
             
             {experiences?.map( ({id,data}) => 
@@ -48,7 +40,8 @@ const Carousel = () => {
                     />
             )}
             
-        </div>
+        </div>}
+        </>
     )
 };
 
