@@ -57,8 +57,24 @@ const Page = () => {
     return data
   }
 
+  const [hydrated, setHydrated] = useState(false);
+    useEffect(() => {
+      const respond = async () => {
+        const delay = (duration:number) => new Promise(resolve => setTimeout(resolve, duration))
+
+        if(node.overview==""){
+          await delay(100)//fetch may be delayed
+        }
+        
+        setHydrated(true);
+      }
+
+    respond()
+
+    },[])
 
   return(
+    <>{hydrated && 
     <>
     <Title pageTitle={id+" Project"}/>
     <div id={styles.single_project}>
@@ -118,8 +134,9 @@ const Page = () => {
     </div>
 
     </>
-  )
+    }</>)
     
   }
   
-  export default Page;
+export default Page;
+

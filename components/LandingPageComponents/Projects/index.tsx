@@ -5,44 +5,36 @@ import styles from '@/styles/ProjectSection.module.scss';
 
 import Graph from "./Graph";
 
+type Props = {
+    nodes:
+    {
+      id:string,
+      data:{
+        links:string[],
+        text_sections:string[],
+        skills:string[],
+        project_status:string,
+        start_end_dates:string,
+        image_links:string[],
+        overview:string
+      }
+    }[]
+}
 
-const Projects = () => {
+const Projects = ({nodes}:Props) => {
+
+    const [hydrated, setHydrated] = useState(false);
+    useEffect(() => {
+        setHydrated(true);
+    },[])
+
     const [selectedNode,setSelectedNode] = useState("")
-    const [nodes,setNodes] = useState([{
-        id:"",
-        data:{
-                links:[""],
-                text_sections:[],
-                skills:[],
-                project_status:"",
-                start_end_dates:"",
-                image_links:[],
-                overview:""
-            }
-        }])
-    
     
     const onClickNode = function(nodeId:string) {
         setSelectedNode(nodeId)
     };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("../../../../api/Projects",{
-                method:"GET",
-                headers:{
-                    "Content-Type":"application/json",
-                }
-            })
-            if(response.status !==404){
-                const responsejson = await (response).json()
-                setNodes(responsejson.data)
-            }}
-        fetchData();
-        },[]);
-  
-    
-    return(
+    return(<>{hydrated && 
         <div className="" id={styles.main}>
             <div id={styles.title}>
                 <h1>Projects</h1>
@@ -84,7 +76,7 @@ const Projects = () => {
             
             </div>
         </div>
-    )
+    }</>)
 }
 
 export default Projects;
