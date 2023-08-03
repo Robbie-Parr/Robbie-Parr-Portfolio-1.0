@@ -91,9 +91,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
           const responsejson = await (response).json()
           return responsejson.data
       }}
-  const list = await fetchData("http://localhost:3000//api/About");
-  const experience = await fetchData("http://localhost:3000//api/ExperienceCarousel");
-  const nodes = await fetchData("http://localhost:3000//api/Projects");
+
+  const list = await fetchData(process.env.API_URL+"/About");
+  const experience = await fetchData(process.env.API_URL+"/ExperienceCarousel");
+  const nodes = await fetchData(process.env.API_URL+"/Projects");
 
 
   return {

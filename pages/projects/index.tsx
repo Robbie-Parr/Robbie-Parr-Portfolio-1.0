@@ -78,7 +78,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
           const responsejson = await (response).json()
           return responsejson.data
       }}
-  const nodes = await fetchData("http://localhost:3000//api/Projects");
+  const nodes = await fetchData(process.env.API_URL+"/Projects");
 
 
   return {
