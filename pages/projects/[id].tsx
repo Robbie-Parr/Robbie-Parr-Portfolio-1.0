@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import React, {useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faArrowAltCircleLeft} from "@fortawesome/free-solid-svg-icons";
+
 
 import styles from '@/styles/Projects.module.scss';
 import Title from "../../components/Title";
+import {Navigation} from "../../components/ProjectPageComponents"
 
 const Page = () => {
   const router = useRouter();
@@ -71,7 +71,7 @@ const Page = () => {
 
     respond()
 
-    },[])
+    },[id])
 
   return(
     <>{hydrated && 
@@ -80,12 +80,9 @@ const Page = () => {
     <div id={styles.single_project}>
       
       <div id={styles.header}>
-        <div className="flex" style={{backgroundImage:"url("+node?.cover_image+")"}}>
-          <div>
-            <a href="../projects" className="">
-              <FontAwesomeIcon icon={faArrowAltCircleLeft} size="xl" />
-            </a>
-          </div>
+        <Navigation href="../projects"/>
+        <div className="flex" style={{backgroundImage:"url("+node?.cover_image+")",paddingBottom:"20%"}}>
+          
           <div/>
         </div>
         
