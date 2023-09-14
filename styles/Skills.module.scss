@@ -1,66 +1,29 @@
 #container{
-    position: relative;
-    padding-top:.1%;
+    @media (min-width: 580px) {
+        margin-bottom: -8%;
+        width:97%;
+        height:350px;
+    }
+    //position: absolute;
     background-color: rgba(0, 0, 0, 0.514);
     border-radius: 10px;
-    @media (min-width: 580px) {
-        width:97%;
-        height:70%;
-    }
     @media (max-width: 570px) {
-        width:94%;
-        padding-bottom: 60%;
+        width:97%;
+        height:50%;
+        margin-top:-30%;
     }
     
     margin-left:1%;
     
-    > #title{
-        background-image: url("/TextureBackground01.png");
-        color:whitesmoke;
-        
-        
-        background-size:100% 40%;
-        @media (min-width: 580px) {
-            width:6%;
-            height:18%;
-            margin-top:15%;
-            margin-left:48%;
-        }
-        @media (max-width: 570px) {
-            width:20%;
-            padding-bottom: 10%;
-            margin-top:5%;
-            margin-bottom: 50%;
-            margin-left:40%;
-        }
-        
-        border-radius: 50%;
-        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        > p{
-            @media (min-width: 580px) {
-                padding-top:20%;
-                scale:2;
-            }
-            @media (max-width: 570px) {
-                padding-top:15%;
-                scale:2;
-            }
-        }
-        
-    }
-
     > #skill_area{
-        top:0;
         position: absolute;
+        width:100%;
         @media (min-width: 580px) {
-            width:100%;
             height: 90%;
-            margin-top:2%;
         }
         @media (max-width: 570px) {
-            width:100%;
             scale:.8;
-            height:118%;
+            height:90%;
             
             > div {
                 margin-left:-5% !important;
@@ -69,10 +32,6 @@
                     @media (min-width: 580px) {
                         margin-top:15%;
                     }
-                    @media (max-width: 570px) {
-                        
-                    }
-                    
                     scale:.95
                 }
             }}
@@ -88,10 +47,6 @@
     @media (min-width: 580px) {
         padding:1%;
     }
-    @media (max-width: 570px) {
-        
-    }
-
     > p{
     opacity: 0;
     }

@@ -195,12 +195,8 @@ const Skills = () => {
 
     return(
         <div className="text-center" id={styles.container}>
-            <div id={styles.title}>
-                <p>Skills</p>
-            </div>
-
-            
             <div id={styles.skill_area}>
+                <SkillPoint key={"skills"} object={{name:"Skills",image:"ProfilePicture032.png"}} yPos={50} xPos={50} index={0}/>
             {(getDataPoints(skills)).map((i,index) => {
                 
                 let xPos = i[1]
