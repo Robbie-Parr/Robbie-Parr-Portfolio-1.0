@@ -1,6 +1,7 @@
 import React from "react"
 
 import ProjectSection from "./Projects"
+import Navigation from "./Navigation";
 
 const ProjectPageComponents = () => {
     return(
@@ -10,4 +11,4 @@ const ProjectPageComponents = () => {
     )
 }
 
-export {ProjectPageComponents,ProjectSection};
+export {ProjectPageComponents,ProjectSection,Navigation};

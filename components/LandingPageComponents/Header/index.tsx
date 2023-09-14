@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from "framer-motion";
 
 import LinkedInIcon from "./LinkedInIcon";
 import CVLink from "./CVLink"
@@ -13,16 +14,49 @@ const Header = () => {
     
     return(
         <div className="text-center flex w-full" id={styles.header}>
-            <div className="gap-x-5 w-full" id={styles.header_icon_section}>
-                <div className="flex gap-x-5" id={styles.vital_icons}>
+            
+
+            <div className="gap-x-5" id={styles.header_icon_section}>
+            <motion.div 
+            initial={{
+                x:"50%",
+                opacity:0,
+            }}
+
+            animate={{
+                x:"12%",
+                opacity:1,
+                scale:1.25,
+            }}
+
+            transition={{
+                duration:1.2,
+                delay:.5,
+            }}
+         className="flex gap-x-5" id={styles.vital_icons}>
                     <LinkedInIcon/>
                     <CVLink/>
-                </div>
-                <div className="flex gap-x-3" id={styles.nonvital_icons}>
+                </motion.div>
+                <motion.div 
+            initial={{
+                x:"-50%",
+                opacity:0,
+            }}
+
+            animate={{
+                x:0,
+                opacity:1,
+                scale:1.25,
+            }}
+
+            transition={{
+                duration:1.2,
+                delay:.5,
+            }} className="flex gap-x-3" id={styles.nonvital_icons}>
                     <MeetupIcon/>
                     <GitHubIcon/>
                     <BlogIcon/>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

@@ -20,7 +20,25 @@
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     padding: 20px;
-    
+
+    @media (min-width: 580px) {
+        align-self: center;
+        max-width:71.5%;
+        margin-top:-4%;
+    }
+
+    @media (max-width: 570px) {
+        
+        margin-right: 3%;
+        > div {
+            padding-right:5%;
+        }
+        
+    }
+
+    > div > a:hover{
+        scale:1.25;
+    }
 }
 
 #vital_icons{

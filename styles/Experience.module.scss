@@ -19,7 +19,7 @@
     border-top-right-radius: 10px;
     @media (max-width: 570px) {
         font-size:1.2em;
-        width:80%;
+        width:90%;
     }
 
     @media (min-width: 580px) {
@@ -56,6 +56,22 @@
 #carousel::-webkit-scrollbar-track {
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
     border-radius: 15px;
+}
+
+#emptycard{
+    @media (max-width: 570px) {
+        min-width: 90%;
+        min-height:150%;
+        margin-right:2%;
+        
+    }
+    @media (min-width: 580px) {
+        min-width:40%;
+        min-height:50%;
+        margin-right:8%;
+        
+        
+    }
 }
 
 #card{

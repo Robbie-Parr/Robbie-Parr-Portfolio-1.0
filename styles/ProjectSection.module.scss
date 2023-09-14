@@ -193,3 +193,14 @@
         
     }
 }
+
+#navigation{
+    background-image: url("/TextureBackground03.png");
+    position:absolute;
+    width:20%;
+    height:9%;
+    margin:.2%;
+    border-radius: 20px;
+    flex-direction: row;
+    display: flex;
+}
