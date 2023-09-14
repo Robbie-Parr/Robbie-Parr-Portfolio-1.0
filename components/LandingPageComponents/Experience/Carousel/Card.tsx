@@ -18,9 +18,9 @@ const Card = ({establishment,
                 key_takeaways,
                 references}:Props) => {
     return(
-        <div className="text-center" id={styles.card}>
+        <div id={styles.card}>
             <div id={styles.experience_details}>
-                <div id={styles.experience_titles}>
+                <div className="text-center" id={styles.experience_titles}>
                     <h1><b>{establishment}</b></h1>
                     <h3><b>{job_title}</b></h3>
                 </div>
