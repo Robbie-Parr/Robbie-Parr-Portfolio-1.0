@@ -5,14 +5,14 @@
     border-radius: 10px;
     border-color: transparent;
     @media (max-width: 570px) {
-        margin-left:5%;
+        margin-left:1%;
         margin-right:5%;
         flex:.9
     }
 
     @media (min-width: 580px) {
-        flex:.7;
-        margin-left:24%;
+        flex:0.7;
+        margin-left:10%;
         margin-right:6%;
     }
 
