@@ -102,3 +102,45 @@
     opacity: 1;
     }
 }
+
+
+#carousel_container{
+    overflow-x:scroll;
+    display: flex;
+    padding:2%;
+    margin-left:10%;
+}
+
+#carousel_container::-webkit-scrollbar{
+    @media (max-width: 570px) {
+        display: none;
+    }
+    @media (min-width: 580px) {
+        scroll-padding-right:10%;
+    }
+    
+}
+
+#carousel_container::-webkit-scrollbar-thumb{
+    background-image: url("/TextureBackground01.png");
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#carousel_container::-webkit-scrollbar-track {
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+#card{
+    min-width:200px;
+    min-height:100px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right:20%;
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+}

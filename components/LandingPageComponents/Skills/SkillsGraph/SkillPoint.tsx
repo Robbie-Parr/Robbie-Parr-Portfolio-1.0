@@ -2,8 +2,8 @@ import React,{useEffect, useState} from "react";
 import {motion} from "framer-motion";
 
 import styles from '@/styles/Skills.module.scss';
-
-import {imageRequest} from "../../../pages/api/firebase";
+import useSwitch from "../useSwitch";
+import useImage from "../useImage";
 
 type item = {
     name:string,
@@ -19,17 +19,9 @@ type Props = {
 }
 
 const SkillPoint = ({object,yPos,xPos,index}:Props) => {
-    const [inView,setInView] = useState(false)
+    const {value,flip} = useSwitch()
 
-    const [logoURL,setLogoURL] = useState("");
-
-    useEffect(() => {
-        const result = async () => {
-            let res = await imageRequest(object.image)
-            setLogoURL(res);
-        }
-        result()
-    },[])
+    const image = useImage(object.image);
 
     return(
         <motion.div key={object.name} 
@@ -40,20 +32,20 @@ const SkillPoint = ({object,yPos,xPos,index}:Props) => {
                     height:"70px",
                     borderRadius: "50%",
                     boxShadow: "2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-                    backgroundImage: `url(${logoURL})`,
+                    backgroundImage: `url(${image})`,
                     backgroundSize:"cover",
-                    zIndex: inView ? 10 : 1,
+                    zIndex: value ? 10 : 1,
                     position: "absolute"
                 }}
             >
-            <div onClick={() => setInView(!inView)} 
+            <div onClick={flip} 
                 style={{backgroundColor:"whitesmoke",
-                        opacity:inView ? .8: 0,
+                        opacity:value ? .8: 0,
                         width:"70px",
                         height:"70px",
                         borderRadius: "50%",
                         textSizeAdjust:".2",
-                        zIndex: inView ? 10 : 1,
+                        zIndex: value ? 10 : 1,
                     position:"absolute"}}
                         
                 ><p style={{paddingTop:"30%",scale:".9"}}>{object.name}</p></div>
