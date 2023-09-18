@@ -1,94 +1,16 @@
 #header{
-    width: 100%;
+    width: 98%;
     height: 10%;
     padding: 1%;
-    @media (max-width: 570px) {
-        flex-direction: column;
-    }
-    @media (min-width: 580px) {
-        flex-direction: row;
-    }
+    display: flex;
+    flex-direction: column;
 }
 
-.Logo_Icon{
-    @media (max-width: 570px) {
-        
-    }
 
-    @media (min-width: 580px) {
-       
-    }
-    
-}
 
-.header_image{
-    flex:.2;
-    padding-left: 5%;
-    @media (max-width: 570px) {
-        position: absolute;
-        z-index:-1;
-        opacity: 0;
-    }
-
-    > .Logo_Icon{
-        padding-left:5%;
-        padding-right:5%;
-        margin: 10px;
-        
-    > div {
-        @media (min-width: 580px) {
-        height:120px;
-        width:120px;
-
-        > #icon{
-        border-radius: 100px;
-        margin: 1px;
-        @media (max-width: 570px) {
-            height: 70px;
-            width: 70px;
-            margin-right: 10%;
-            padding-left: -1%;
-            opacity: 0;
-            position: absolute;
-            z-index:-1;
-
-        }
-
-        @media (min-width: 580px) {
-            height: 120px;
-            width: 120px;
-            margin-right: 10%;
-            
-        }
-    }
-}
-}}}
-
-#lower_header_image{
-    
-    @media (max-width: 570px) {
-        > .Logo_Icon{
-            padding:20%;
-            
-        > div > #icon{
-            margin-left:10%;
-            height:80%;
-            width:80%;
-            border-radius: 50%;
-        }
-    }
-    }
-
-    @media (min-width: 580px) {
-        opacity: 0;
-        z-index:-1;
-        position: absolute;
-    }
-}
 
 #header_icon_section{
     display: flex;
-    flex:.8;
     flex-direction: row;
     padding-top:10px;
     align-items: center;
@@ -98,6 +20,7 @@
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     padding: 20px;
+    
 }
 
 #vital_icons{
@@ -106,6 +29,9 @@
 
 #nonvital_icons{
     flex:.4;
+    @media (min-width: 580px) {
+        justify-content: right;
+    }
 }
 
 .LinkedIn_icon{
