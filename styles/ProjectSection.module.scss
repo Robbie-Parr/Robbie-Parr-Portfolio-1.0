@@ -172,15 +172,17 @@
 }
 
 #main{
-    padding-left:1%;
+    
     padding-right:1%;
     padding-top:.5%;
     @media (max-width: 570px) {
         margin-top: -30%;
+        padding-left:1%;
 
     }
     @media (min-width: 580px) {
         margin-top:10%;
+        padding-left:10%;
         
     }
 }

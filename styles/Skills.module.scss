@@ -4,13 +4,12 @@
         width:97%;
         height:350px;
     }
-    //position: absolute;
     background-color: rgba(0, 0, 0, 0.514);
     border-radius: 10px;
     @media (max-width: 570px) {
         width:97%;
         height:50%;
-        margin-top:-30%;
+        margin-top: -30%;
     }
     
     margin-left:1%;
@@ -64,6 +63,9 @@
     display: flex;
     padding:2%;
     margin-left:10%;
+    @media (max-width: 570px) {
+        margin-top: -30%;
+    }
 }
 
 #carousel_container::-webkit-scrollbar{
