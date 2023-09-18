@@ -71,9 +71,9 @@ const Home = ({list,experience,nodes}:Props) => {
             <Experience experience={experience}/>
           </section>
 
-          {/*<section className="snap-start" id="skills">
+          <section className="snap-start" id="skills">
             <Skills/>
-          </section>*/}
+          </section>
         
           <section className="snap-start" id="projects-section">
             <Projects nodes={nodes}/>
