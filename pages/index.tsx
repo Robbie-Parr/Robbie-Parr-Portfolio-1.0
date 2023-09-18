@@ -5,7 +5,14 @@ import { GetStaticProps } from "next";
 import styles from '@/styles/Index.module.scss';
 
 
-import {Header,About,Experience,Projects,ContactForm,Skills} from "../components/LandingPageComponents"
+import {
+  LogoSection,
+  Header,
+  About,
+  Experience,
+  Projects,
+  ContactForm,
+  Skills} from "../components/LandingPageComponents"
 import Title from "../components/Title";
 
 type Props = {
@@ -49,6 +56,9 @@ const Home = ({list,experience,nodes}:Props) => {
           <Header />
         </div>
 
+        <div>
+          <LogoSection/>
+        </div>
 
         <div className="space-y-40" id={styles.text_section}>
           {/* todo: <Link href="#contact-form">Tp Contact Form</Link> */}
