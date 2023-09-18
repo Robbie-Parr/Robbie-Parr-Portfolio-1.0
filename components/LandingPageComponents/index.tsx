@@ -1,5 +1,6 @@
 import React from "react"
 
+import LogoSection from "./LogoSection"
 import Header from "./Header"
 import About from "./About"
 import Experience from "./Experience"
@@ -15,6 +16,6 @@ const LandingPageComponents = () => {
     )
 }
 
-export {Header,About,Experience,Projects,ContactForm,Skills};
+export {LogoSection,Header,About,Experience,Projects,ContactForm,Skills};
 
 export default LandingPageComponents;

@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from "react";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
-import styles from '@/styles/Header.module.scss';
+import styles from '@/styles/LogoSection.module.scss';
 
 import {imageRequest} from "../../../pages/api/firebase";
 
