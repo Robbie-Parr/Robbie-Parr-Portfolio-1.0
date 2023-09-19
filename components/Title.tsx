@@ -15,9 +15,6 @@ const Title = ({pageTitle}:Props) => {
             <meta property="og:image" content="/LogoIcon.png" />
             <meta property="og:title" content={fullTitle}/>
             <meta property="og:description" content="Hello there, Welcome to Robbie Parr's Portfolio website"/>
-
-            <meta property="image" content="/LogoIcon.png" />
-            <meta property="title" content={fullTitle}/>
             <meta property="description" content="Hello there, Welcome to Robbie Parr's Portfolio website"/>
             
         </Head>
