@@ -19,4 +19,13 @@
     text-align: center;
     color:whitesmoke;
     border-radius: 20px;
+    @media (max-width: 570px) {
+        font-size:.6em;
+        
+    }
+
+    @media (min-width: 580px) {
+        font-size:1em;
+       
+    }
 }
