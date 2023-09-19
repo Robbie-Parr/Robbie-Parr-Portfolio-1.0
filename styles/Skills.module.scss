@@ -1,12 +1,19 @@
 #container{
     @media (min-width: 580px) {
         margin-bottom: -8%;
+        margin-bottom: -8%;
         width:97%;
+        height:350px;
         height:350px;
     }
     background-color: rgba(0, 0, 0, 0.514);
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 10px;
     @media (max-width: 570px) {
+        width:97%;
+        height:50%;
+        margin-top: -30%;
         width:97%;
         height:50%;
         margin-top: -30%;
