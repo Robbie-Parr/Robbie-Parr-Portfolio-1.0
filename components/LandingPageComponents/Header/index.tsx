@@ -37,7 +37,6 @@ const Header = () => {
                     <LinkedInIcon/>
                     <CVLink/>
                 </motion.div>
-                
         <motion.div 
             initial={{
                 x:"-50%",

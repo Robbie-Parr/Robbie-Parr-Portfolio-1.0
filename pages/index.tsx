@@ -8,6 +8,7 @@ import styles from '@/styles/Index.module.scss';
 import {
   LogoSection,
   Header,
+  Navigation,
   About,
   Experience,
   Projects,
@@ -54,6 +55,7 @@ const Home = ({list,experience,nodes}:Props) => {
 
         <div className="z-1 snap-start">
           <Header />
+          <Navigation/>
         </div>
 
         <div>
@@ -83,8 +85,11 @@ const Home = ({list,experience,nodes}:Props) => {
             <ContactForm/>
           </section>
         
-          <footer/>
+          
         </div>
+        <footer className="pt-2 pb-2">
+          <Navigation/>
+        </footer>
 
     </div>
   )
