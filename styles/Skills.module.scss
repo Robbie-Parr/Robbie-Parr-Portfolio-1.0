@@ -1,12 +1,19 @@
 #container{
     @media (min-width: 580px) {
         margin-bottom: -8%;
+        margin-bottom: -8%;
         width:97%;
+        height:350px;
         height:350px;
     }
     background-color: rgba(0, 0, 0, 0.514);
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 10px;
     @media (max-width: 570px) {
+        width:97%;
+        height:50%;
+        margin-top: -30%;
         width:97%;
         height:50%;
         margin-top: -30%;
@@ -57,15 +64,20 @@
     }
 }
 
+#main{
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 570px) {
+        margin-top: -30%;
+    }
+}
+
 
 #carousel_container{
     overflow-x:scroll;
     display: flex;
     padding:2%;
-    margin-left:10%;
-    @media (max-width: 570px) {
-        margin-top: -30%;
-    }
+    margin-left:1%;
 }
 
 #carousel_container::-webkit-scrollbar{
@@ -100,4 +112,34 @@
     text-align:center;
     display:flex;
     flex-direction:row;
+}
+
+#title{
+    @media (max-width: 570px) {
+        margin-left:1%;
+    }
+    @media (min-width: 580px) {
+        margin-left:10%;
+    }
+
+    text-align:center;
+    min-height:150px;
+    align-self: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding:1%;
+    background-image: url("/TextureBackground01.png");
+    > h1 {
+        font-family: 'Akaya Kanadaka', cursive;
+        color:whitesmoke;
+        @media (max-width: 570px) {
+            font-size:1.2em;
+            
+        }
+    
+        @media (min-width: 580px) {
+            font-size:2em;
+           
+        }
+    }
 }
