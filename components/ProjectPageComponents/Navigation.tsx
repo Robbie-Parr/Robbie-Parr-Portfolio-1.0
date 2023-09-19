@@ -17,9 +17,11 @@ const Navigation = ({href}:Props) => {
               <FontAwesomeIcon icon={faArrowAltCircleLeft} size="xl" />
             </a>
 
+            {href !="./" && 
             <div style={{marginLeft:"10%"}}>
                 <p style={{fontSize:30}}>Click for Skills</p>
             </div>
+            }
           </div>
           </div>
     )
