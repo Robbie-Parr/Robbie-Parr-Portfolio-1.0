@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Akaya+Kanadaka');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+
 #main{
     
     padding-top:.5%;
@@ -13,13 +16,14 @@
 }
 
 #title{
+    font-family: 'Akaya Kanadaka', cursive;
     background-image: url("/TextureBackground01.png");
     color:whitesmoke;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     @media (max-width: 570px) {
         font-size:1.2em;
-        width:80%;
+        width:90%;
     }
 
     @media (min-width: 580px) {
@@ -58,6 +62,22 @@
     border-radius: 15px;
 }
 
+#emptycard{
+    @media (max-width: 570px) {
+        min-width: 90%;
+        min-height:150%;
+        margin-right:2%;
+        
+    }
+    @media (min-width: 580px) {
+        min-width:40%;
+        min-height:50%;
+        margin-right:8%;
+        
+        
+    }
+}
+
 #card{
     
     background-color: rgba(0, 0, 0, 0.514);
@@ -91,6 +111,7 @@
             background-color: whitesmoke;
 
             > h1{
+                font-family: 'Akaya Kanadaka', cursive;
                 padding-bottom: 2%;
                 background-color: lightgrey;
                 border-top-left-radius: 10px;
@@ -105,6 +126,7 @@
             }
 
             > h3{
+                font-family: 'Arial', cursive;
                 padding-top:1%;
                 @media (max-width: 570px) {
                     font-size:.8em;
@@ -128,6 +150,7 @@
             background-color: rgba(245, 245, 245, 0.938);
             
             > h4{
+                font-family: 'Arial', cursive;
                 @media (max-width: 570px) {
                     font-size:.8em;
                 }
@@ -141,7 +164,9 @@
     }
     
     > #details{
+        font-family: 'Arial', cursive;
         display: flex;
+        flex:.7;
         margin-left:2%;
         margin-right:2%;
         padding:4%;
@@ -157,9 +182,14 @@
             font-size:1em;
             min-height:32%;
         }
+        > p{
+            text-align: left;
+        }
     }
 
     > #information{
+        flex:.2;
+        font-family: 'Arial', cursive;
         display: flex;
         padding:1%;
         flex-direction: column;
@@ -176,7 +206,7 @@
         }
         @media (min-width: 580px) {
             font-size:1em;
-            min-height:35%;
+            min-height:30%;
         }
 
         > #takeaways{
@@ -184,9 +214,9 @@
             
             
             > li{
-                max-width: 90%;
+                max-width: 100%;
                 text-align: left;
-                padding-left: 10%;
+                padding-left: 1%;
                 padding-bottom: 1%;
             }
         }

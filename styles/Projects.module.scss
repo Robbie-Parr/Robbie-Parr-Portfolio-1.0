@@ -14,7 +14,7 @@
             flex:.03;
             padding-left:.5%;
             padding-top:.5%;
-            padding-bottom: 20%;
+            
 
             > a {
                 color: rgba(253, 101, 0, 0.349);
@@ -60,6 +60,7 @@
             background-color: whitesmoke;
             border-bottom-left-radius: 10px;
             border-top-right-radius: 10px;
+            
             @media (max-width: 570px) {
                 padding:5%;
             }
@@ -96,6 +97,7 @@
             margin-left:.5%;
         }
         > div{
+            align-self:center;
             flex:.6;
             min-width:60%;
             background-color: whitesmoke;
@@ -186,7 +188,7 @@
         flex:.03;
         padding-left:.5%;
         padding-top:.5%;
-        padding-bottom: 20%;
+       
 
         > a {
             color: rgba(253, 101, 0, 0.349);

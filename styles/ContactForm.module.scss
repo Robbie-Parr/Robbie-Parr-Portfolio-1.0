@@ -17,6 +17,7 @@
 
 #title{
     background-image: url("/TextureBackground01.png");
+    font-family: 'Akaya Kanadaka', cursive;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color:whitesmoke;
@@ -35,14 +36,14 @@
     @media (max-width: 570px) {
         font-size:1.2em;
         width:90%;
-        margin-left: 5%;
+        margin-left: 2%;
         margin-right:5%;
         margin-top:-25%
     }
 
     @media (min-width: 580px) {
         width:60%;
-        margin-left: 30%;
+        margin-left: 10%;
         margin-right:10%;
         padding-top:.5%;
     }
@@ -62,6 +63,7 @@
         padding:1%;
 
         > h4{
+            font-family: 'Arial', cursive;
             @media (max-width: 570px) {
                 font-size:.8em;
             }
@@ -129,9 +131,10 @@
     }
 }
 
+
 #linkedIn_section{
     @media (max-width: 570px) {
-        padding-left:12%;
+        padding-left:20%;
     }
 
     @media (min-width: 580px) {

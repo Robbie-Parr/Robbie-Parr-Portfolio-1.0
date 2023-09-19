@@ -2,9 +2,10 @@
     border-radius: 10px;
     > section{    
         @media (min-width: 580px) {
-            margin-top: 1%;
-            height: 100vh;
+            margin-top: 3%;
         }
-        
+        @media (max-width: 570px) {
+            padding-top: 1%;
+        }
     }
 }

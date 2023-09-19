@@ -8,6 +8,7 @@ import styles from '@/styles/Projects.module.scss';
 
 import {ProjectPageComponents,ProjectSection} from "../../components/ProjectPageComponents"
 import Title from "../../components/Title";
+import {Navigation} from "../../components/ProjectPageComponents"
 
 type Props = {
   nodes:
@@ -36,18 +37,15 @@ const ProjectPage = ({nodes}:Props) => {
       <>
       <Title pageTitle="Projects"/>
       
-      <div className="text-center" id={styles.root}>
+      <div className="" id={styles.root}>
         <div id={styles.header}>
-          <div className="flex" style={{backgroundImage:"url(/TextureBackground01.png)"}}>
-            <div>
-              <a href="./" className="">
-                <FontAwesomeIcon icon={faArrowAltCircleLeft} size="xl" />
-              </a>
-            </div>
+        <Navigation href="./"/>
+          <div className="flex text-center" style={{backgroundImage:"url(/TextureBackground01.png)",paddingBottom:"20%"}}>
+          
             <div/>
           </div>
           
-          <div>
+          <div className="flex text-center">
             <h1 className="m-4 p-2">Projects</h1>
           </div>
         </div>
