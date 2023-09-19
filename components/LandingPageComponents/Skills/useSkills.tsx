@@ -21,7 +21,6 @@ const useSkills = () => {
             }}
         fetchData();
     },[]);
-        console.log(skills)
 
     return skills;
 }
