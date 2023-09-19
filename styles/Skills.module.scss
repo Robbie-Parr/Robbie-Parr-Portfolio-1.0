@@ -57,15 +57,20 @@
     }
 }
 
+#main{
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 570px) {
+        margin-top: -30%;
+    }
+}
+
 
 #carousel_container{
     overflow-x:scroll;
     display: flex;
     padding:2%;
-    margin-left:10%;
-    @media (max-width: 570px) {
-        margin-top: -30%;
-    }
+    margin-left:1%;
 }
 
 #carousel_container::-webkit-scrollbar{
@@ -112,7 +117,7 @@
     padding:1%;
     background-image: url("/TextureBackground01.png");
     > h1 {
-        
+        font-family: 'Akaya Kanadaka', cursive;
         color:whitesmoke;
         @media (max-width: 570px) {
             font-size:1.2em;

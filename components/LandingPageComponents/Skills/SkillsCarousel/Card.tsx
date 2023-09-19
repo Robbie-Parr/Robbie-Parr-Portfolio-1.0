@@ -18,8 +18,8 @@ const Card = ({name,image}:Props) => {
             <div style={{
                 backgroundImage: `url(${imageUrl})`,
                 backgroundSize:"cover",
-                minWidth:"100px",
-                minHeight:"100px",
+                width:"100px",
+                height:"100px",
                 borderRadius: "50%",
             }}/>
             
