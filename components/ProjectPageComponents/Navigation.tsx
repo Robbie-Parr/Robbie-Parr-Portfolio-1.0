@@ -13,7 +13,7 @@ const Navigation = ({href}:Props) => {
     return(
         <div>
         <div id={styles.navigation}>
-            <a href={href} className="">
+            <a href={href} className="w-12">
               <FontAwesomeIcon icon={faArrowAltCircleLeft} size="xl" />
             </a>
 
