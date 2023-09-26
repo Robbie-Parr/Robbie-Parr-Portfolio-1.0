@@ -2,6 +2,11 @@ import React from "react"
 import Head from 'next/head';
 import { GetStaticProps } from "next";
 
+import { Provider } from "react-redux";
+import store from "../Redux/store";
+import {createUpdateAll} from "../Redux/Actions"
+
+
 import styles from '@/styles/Index.module.scss';
 
 
@@ -45,10 +50,21 @@ type Props = {
         overview:string
       }
     }[],
+  skills:
+    {
+      name:string,
+      image:string
+    }[]
+
 }
 
-const Home = ({list,experience,nodes}:Props) => {
+const Home = ({list,experience,nodes,skills}:Props) => {
+  
+  store.dispatch(createUpdateAll(store.dispatch,list,experience,nodes,skills))
+  //identify how to get redux values from store
+  console.log(store.getState().about)
   return(
+    <Provider store={store}>
     <div className="h-screen snap-y snap-mandatory z-0" id={styles.main}>
         <Title pageTitle="Portfolio"/>
         
@@ -92,6 +108,7 @@ const Home = ({list,experience,nodes}:Props) => {
         </footer>
 
     </div>
+    </Provider>
   )
   
 }
@@ -114,15 +131,17 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const list = await fetchData(process.env.API_URL+"/About");
   const experience = await fetchData(process.env.API_URL+"/ExperienceCarousel");
   const nodes = await fetchData(process.env.API_URL+"/Projects");
-
+  const skills = await fetchData(process.env.API_URL+"/Skills");
 
   return {
       props: {
           list,
           experience,
-          nodes
+          nodes,
+          skills
       },
 
       revalidate: 21600
   }
 }
+
