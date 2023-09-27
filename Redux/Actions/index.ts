@@ -1,10 +1,25 @@
 import { Dispatch } from "@reduxjs/toolkit";
 
 
-import { UPDATE_ABOUT, AboutType,createUpdateAbout} from "./aboutActions";
-import { UPDATE_EXPERIENCE, ExperienceType, createUpdateExperience } from "./experienceActions";
-import { UPDATE_PROJECTS,ProjectsType,createUpdateProjects,SingularProjectType } from "./projectsActions";
-import { UPDATE_SKILLS, InputSkillType,SkillsType,createUpdateSkills } from "./skillActions";
+import { 
+    UPDATE_ABOUT, 
+    AboutType,
+    createUpdateAbout} from "./aboutActions";
+import { 
+    UPDATE_EXPERIENCE, 
+    ExperienceType, 
+    createUpdateExperience } from "./experienceActions";
+import { 
+    UPDATE_PROJECTS,
+    SET_CURRENT_PROJECT,
+    ProjectsType,
+    SingularProjectType,
+    createUpdateProjects,
+    createSetCurrentProject} from "./projectsActions";
+import { 
+    UPDATE_SKILLS, 
+    InputSkillType,
+    SkillsType,createUpdateSkills} from "./skillActions";
 
 
 export const UPDATE_ALL = "UPDATE_ALL";
@@ -23,6 +38,7 @@ export {
     UPDATE_ABOUT, createUpdateAbout,
     UPDATE_EXPERIENCE, createUpdateExperience,
     UPDATE_PROJECTS, createUpdateProjects,
+    SET_CURRENT_PROJECT,createSetCurrentProject,
     UPDATE_SKILLS, createUpdateSkills,
 }
 

@@ -1,5 +1,6 @@
 export const UPDATE_PROJECTS = "UPDATE_PROJECTS";
 
+export const SET_CURRENT_PROJECT = "SET_CURRENT_PROJECT"
 
 export type ProjectsType = {
   id:string,
@@ -30,4 +31,9 @@ export type SingularProjectType = {
 export const createUpdateProjects = (projects:ProjectsType) => ({
     type:UPDATE_PROJECTS,
     payload:{data:[...projects]}
+})
+
+export const createSetCurrentProject = (project:SingularProjectType) => ({
+  type:SET_CURRENT_PROJECT,
+  payload:{data:{...project}}
 })

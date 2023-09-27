@@ -2,8 +2,10 @@ import React, {useEffect, useState } from "react";
 
 import styles from '@/styles/Projects.module.scss';
 
-import Graph from "./Graph";
+import Graph from "../../LandingPageComponents/Projects/Graph";
 import SelectedDisplay from "./SelectedDisplay";
+
+import store from "@/Redux/store";
 
 type Props = {
     nodes:
@@ -21,8 +23,9 @@ type Props = {
     }[]
 }
 
-const Projects = ({nodes}:Props) => {
-    
+const Projects = () => {
+    const nodes = [...store.getState().projects]
+
     const [nodesSelected,setNodeSelected] = useState([""]);
     
     const onClickNode = function(nodeId:string) {

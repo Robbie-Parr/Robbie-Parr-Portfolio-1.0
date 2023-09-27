@@ -3,6 +3,12 @@ import React from "react"
 import ProjectSection from "./Projects"
 import Navigation from "./Navigation";
 
+import SectionsMap from "./SectionsMap";
+import TitleSection from "./TitleSection"
+
+import useProject from "./useProject";
+
+
 const ProjectPageComponents = () => {
     return(
         <div className="text-center bg-white">
@@ -11,4 +17,10 @@ const ProjectPageComponents = () => {
     )
 }
 
-export {ProjectPageComponents,ProjectSection,Navigation};
+export {
+    ProjectPageComponents,
+    ProjectSection,
+    Navigation,
+    useProject,
+    SectionsMap,
+    TitleSection};

@@ -5,11 +5,14 @@ import {faArrowAltCircleLeft} from "@fortawesome/free-solid-svg-icons";
 
 import styles from '@/styles/ProjectSection.module.scss';
 
+import useProject from "./useProject";
+
 type Props = {
     href:string,
 }
 
 const Navigation = ({href}:Props) => {
+
     return(
         <div>
         <div id={styles.navigation}>
@@ -17,9 +20,9 @@ const Navigation = ({href}:Props) => {
               <FontAwesomeIcon icon={faArrowAltCircleLeft} size="xl" />
             </a>
 
-            {href !="./" && 
+            {href !="./" &&
             <div style={{marginLeft:"10%"}}>
-                <p style={{fontSize:30}}>Click for Skills</p>
+                {/*<p style={{fontSize:30}}>Click for Skills</p>*/}
             </div>
             }
           </div>

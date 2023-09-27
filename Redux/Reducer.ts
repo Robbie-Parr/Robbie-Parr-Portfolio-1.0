@@ -4,6 +4,7 @@ import {
     UPDATE_ABOUT,
     UPDATE_EXPERIENCE,
     UPDATE_PROJECTS,
+    SET_CURRENT_PROJECT,
     UPDATE_SKILLS,
     SingularProjectType,
     InputSkillType,
@@ -29,7 +30,7 @@ export const Reducer = (state:any,action:AnyAction) => {
               const {overview,links} = data;
               return {id,overview,links}
             })
-            return {...state,projects:{...data},projectIds:justIds}
+            return {...state,projects:[...data],projectIds:justIds}
         }
         case UPDATE_SKILLS:{
             const {data} = action.payload;
@@ -43,6 +44,10 @@ export const Reducer = (state:any,action:AnyAction) => {
             state = Reducer(state,createUpdateProjects(projects))
             state = Reducer(state,createUpdateSkills(skills))
             return state
+        }
+        case SET_CURRENT_PROJECT:{
+            const {data} = action.payload;
+            return {...state, [data.id]:{...data.data}}
         }
         default:
             return state;

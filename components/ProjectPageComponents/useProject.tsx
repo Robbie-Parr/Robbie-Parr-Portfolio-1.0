@@ -1,13 +1,16 @@
 import React, {useEffect, useState } from "react";
 
+import store from "@/Redux/store";
+import { SingularProjectType,createSetCurrentProject } from "@/Redux/Actions";
+
 const useProject = (id:string) => {
     const [node,setNode] = useState({
         links:[""],
-        text_sections:[],
-        skills:[],
+        text_sections:[""],
+        skills:[""],
         project_status:"",
         start_end_dates:"",
-        image_links:[],
+        image_links:[""],
         overview:"",
         cover_image:"",
     })
@@ -21,22 +24,32 @@ const useProject = (id:string) => {
   
     useEffect(() => {
       const fetchData = async () => {
-          const response = await fetch("../api/Projects",{
-              method:"POST",
-              headers:{
-                  "Content-Type":"application/json",
-              },
-              body:JSON.stringify({
-                doc:id,
-              })
-          })
-          if(response.status !==404){
-              const responsejson = await (response).json()
-              
-              setNode(responsejson.data)
-          }}
+        const response = await fetch("../api/Projects",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+            },
+            body:JSON.stringify({
+              doc:id,
+            })
+        })
+        if(response.status !==404){
+            const responsejson = await (response).json()
+            setNode(responsejson.data)
+            store.dispatch(createSetCurrentProject({id:id,data:node}))
+        }}
+
+      if(store.getState()!=undefined){
+        setNode( store.getState().projects !=undefined ?
+        store.getState().projects.filter(
+          (project:SingularProjectType) => 
+            project.id===id)
+        :store.getState()[id]
+        )
+      }else{
+      
       fetchData();
-      },[id]);
+  }},[id]);
 
 
     const combine_Text_and_Image = (text_sections:string[],image_links:string[]) => {
