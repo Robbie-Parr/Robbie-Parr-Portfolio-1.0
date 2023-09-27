@@ -11,7 +11,6 @@ type Props = {
 
 const Card = ({name,image}:Props) => {
     const imageUrl = useImage(image);
-    console.log(imageUrl)
     return(
         <div id={styles.card}>
             

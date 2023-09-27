@@ -3,6 +3,10 @@ import {useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowAltCircleLeft} from "@fortawesome/free-solid-svg-icons";
 import { GetStaticProps } from "next";
+import { Provider } from "react-redux";
+
+import store from "@/Redux/store";
+import {createUpdateProjects} from "@/Redux/Actions"
 
 import styles from '@/styles/Projects.module.scss';
 
@@ -27,6 +31,8 @@ type Props = {
 }
 
 const ProjectPage = ({nodes}:Props) => {
+  store.dispatch(createUpdateProjects(nodes))
+
   const [hydrated, setHydrated] = useState(false);
     useEffect(() => {
         setHydrated(true);
@@ -34,7 +40,7 @@ const ProjectPage = ({nodes}:Props) => {
 
   return(
     <> {hydrated && 
-      <>
+      <Provider store={store}>
       <Title pageTitle="Projects"/>
       
       <div className="" id={styles.root}>
@@ -54,10 +60,10 @@ const ProjectPage = ({nodes}:Props) => {
         {/* todo: This part of my page still needs to be finished/refined.*/}
         <h4>This page is in development</h4>
         <section id="projects-section">
-          <ProjectSection nodes={nodes}/>
+          <ProjectSection/>
         </section>
       </div>
-     </>}</>
+      </Provider>}</>
   )
   
 }
@@ -77,7 +83,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
           return responsejson.data
       }}
   const nodes = await fetchData(process.env.API_URL+"/Projects");
-
+      
 
   return {
       props: {

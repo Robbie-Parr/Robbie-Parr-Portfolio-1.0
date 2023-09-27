@@ -1,5 +1,7 @@
-import React from "react"
+import React,{useEffect} from "react"
 import Carousel from "./Carousel";
+
+import store from "@/Redux/store";
 
 import styles from '@/styles/Experience.module.scss';
 
@@ -14,12 +16,11 @@ type Props = {
     }}[]
 }
 
-const Experience = ({experience}:Props) => {
-    
+const Experience = () => {
     return(
         <div className="text-center" id={styles.main}>
             <h1 id={styles.title}>Experience</h1>
-            <Carousel experience={experience}/>
+            <Carousel/>
         </div>
     )
 }

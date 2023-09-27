@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import {motion} from "framer-motion";
+import store from "@/Redux/store";
 
 import styles from '@/styles/About.module.scss';
 
@@ -11,11 +12,14 @@ type Props = {
 }
 
 
-const About = ({list}:Props) => {
+const About = () => {
 
-    if(list.text==null){
-        list = {images:[],text:["You may not be able to connect to the database.","Please wait for this information to load.", "If this issue persists, check your internet connection and or get in contact."]}
+    let list = {images:[""],text:["You may not be able to connect to the database.","Please wait for this information to load.", "If this issue persists, check your internet connection and or get in contact."]}
+    let newList = store.getState().about
+    if(newList.text && newList.text.length>0){
+        list = newList;
     }
+    
 
     return(
         <motion.div 

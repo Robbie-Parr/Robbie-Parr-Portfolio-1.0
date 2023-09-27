@@ -1,6 +1,11 @@
-import React from "react"
+import React,{useEffect,useState} from "react"
 import Head from 'next/head';
 import { GetStaticProps } from "next";
+
+import { Provider } from "react-redux";
+import store from "../Redux/store";
+import {createUpdateAll} from "../Redux/Actions"
+
 
 import styles from '@/styles/Index.module.scss';
 
@@ -45,10 +50,20 @@ type Props = {
         overview:string
       }
     }[],
+  skills:
+    {
+      name:string,
+      image:string
+    }[]
+
 }
 
-const Home = ({list,experience,nodes}:Props) => {
+const Home = ({list,experience,nodes,skills}:Props) => {
+  useState(store.dispatch(createUpdateAll(list,experience,nodes,skills)))
+  
+
   return(
+    <Provider store={store}>
     <div className="h-screen snap-y snap-mandatory z-0" id={styles.main}>
         <Title pageTitle="Portfolio"/>
         
@@ -63,14 +78,14 @@ const Home = ({list,experience,nodes}:Props) => {
         </div>
 
         <div className="space-y-40" id={styles.text_section}>
-          {/* todo: <Link href="#contact-form">Tp Contact Form</Link> */}
+
 
           <section className="snap-start" id="about">
-            <About list={list}/>
+            <About/>
           </section>
 
           <section className="snap-start" id="experience">
-            <Experience experience={experience}/>
+            <Experience/>
           </section>
 
           <section className="snap-start" id="skills">
@@ -78,7 +93,7 @@ const Home = ({list,experience,nodes}:Props) => {
           </section>
         
           <section className="snap-start" id="projects-section">
-            <Projects nodes={nodes}/>
+            <Projects/>
           </section>
 
           <section className="snap-start" id="contact-form">
@@ -92,6 +107,7 @@ const Home = ({list,experience,nodes}:Props) => {
         </footer>
 
     </div>
+    </Provider>
   )
   
 }
@@ -114,15 +130,19 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const list = await fetchData(process.env.API_URL+"/About");
   const experience = await fetchData(process.env.API_URL+"/ExperienceCarousel");
   const nodes = await fetchData(process.env.API_URL+"/Projects");
+  const skills = await fetchData(process.env.API_URL+"/Skills");
 
+  store.dispatch(createUpdateAll(list,experience,nodes,skills))
 
   return {
       props: {
           list,
           experience,
-          nodes
+          nodes,
+          skills
       },
 
       revalidate: 21600
   }
 }
+

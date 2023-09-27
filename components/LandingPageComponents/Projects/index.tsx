@@ -1,7 +1,10 @@
 import React from "react"
 import {useEffect, useState } from "react";
 
+import store from "@/Redux/store";
+
 import styles from '@/styles/ProjectSection.module.scss';
+
 
 import Graph from "./Graph";
 
@@ -21,7 +24,10 @@ type Props = {
     }[]
 }
 
-const Projects = ({nodes}:Props) => {
+const Projects = () => {
+    let nodes = [{id:"",overview:"",links:[""]}]
+    nodes = [...store.getState().projectIds]
+    
 
     const [hydrated, setHydrated] = useState(false);
     useEffect(() => {
@@ -45,7 +51,7 @@ const Projects = ({nodes}:Props) => {
                 <Graph 
                     onClickNode={onClickNode} 
                     nodeIds={nodes.map(node => ({id:node.id}))} 
-                    links={nodes.map(node => ({source1:node.id,targets:node.data.links}))}/>
+                    links={nodes.map(node => ({source1:node.id,targets:node.links}))}/>
                 }
                 <div className="flex-col" id={styles.selected}>
                 
@@ -58,7 +64,7 @@ const Projects = ({nodes}:Props) => {
                         (
                             
                         <div className="flex-col space-y-4" id={styles.selected_info}>
-                            <p>{nodes[nodes.findIndex((node) => node.id===selectedNode)].data.overview}</p>
+                            <p>{nodes[nodes.findIndex((node) => node.id===selectedNode)].overview}</p>
                             
                         </div>
                         
