@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useEffect} from "react"
 import Head from 'next/head';
 import { GetStaticProps } from "next";
 
@@ -59,10 +59,9 @@ type Props = {
 }
 
 const Home = ({list,experience,nodes,skills}:Props) => {
-  
-  store.dispatch(createUpdateAll(store.dispatch,list,experience,nodes,skills))
-  //identify how to get redux values from store
-  console.log(store.getState().about)
+
+  store.dispatch(createUpdateAll(list,experience,nodes,skills))
+
   return(
     <Provider store={store}>
     <div className="h-screen snap-y snap-mandatory z-0" id={styles.main}>
@@ -82,11 +81,11 @@ const Home = ({list,experience,nodes,skills}:Props) => {
           {/* todo: <Link href="#contact-form">Tp Contact Form</Link> */}
 
           <section className="snap-start" id="about">
-            <About list={list}/>
+            <About/>
           </section>
 
           <section className="snap-start" id="experience">
-            <Experience experience={experience}/>
+            <Experience/>
           </section>
 
           <section className="snap-start" id="skills">
@@ -94,7 +93,7 @@ const Home = ({list,experience,nodes,skills}:Props) => {
           </section>
         
           <section className="snap-start" id="projects-section">
-            <Projects nodes={nodes}/>
+            <Projects/>
           </section>
 
           <section className="snap-start" id="contact-form">
@@ -132,6 +131,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const experience = await fetchData(process.env.API_URL+"/ExperienceCarousel");
   const nodes = await fetchData(process.env.API_URL+"/Projects");
   const skills = await fetchData(process.env.API_URL+"/Skills");
+
+  
 
   return {
       props: {
