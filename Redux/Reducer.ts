@@ -25,8 +25,8 @@ export const Reducer = (state:any,action:AnyAction) => {
         case UPDATE_PROJECTS:{
             const {data} = action.payload;
             const justIds = data.map(({id,data}:SingularProjectType) => {
-              const {overview} = data;
-              return {id,overview}
+              const {overview,links} = data;
+              return {id,overview,links}
             })
             return {...state,projects:data,projectIds:justIds}
         }
@@ -35,11 +35,11 @@ export const Reducer = (state:any,action:AnyAction) => {
             return {...state,skills:data}
         }
         case UPDATE_ALL:{
-            const {dispatch,about,experience,projects,skills} = action.payload;
-            dispatch(createUpdateAbout(about))
-            dispatch(createUpdateExperience(experience))
-            dispatch(createUpdateProjects(projects))
-            dispatch(createUpdateSkills(skills))
+            const {about,experience,projects,skills} = action.payload;
+            state = Reducer(state,createUpdateAbout(about))
+            state = Reducer(state,createUpdateExperience(experience))
+            state = Reducer(state,createUpdateProjects(projects))
+            state = Reducer(state,createUpdateSkills(skills))
             //Above causing errors modify to use thunk?
             return state
         }

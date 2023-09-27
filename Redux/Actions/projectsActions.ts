@@ -29,5 +29,5 @@ export type SingularProjectType = {
 
 export const createUpdateProjects = (projects:ProjectsType) => ({
     type:UPDATE_PROJECTS,
-    payload:{data:{projects}}
+    payload:{data:projects}
 })
