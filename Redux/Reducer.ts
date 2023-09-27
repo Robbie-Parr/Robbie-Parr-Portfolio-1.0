@@ -5,7 +5,8 @@ import {
     UPDATE_EXPERIENCE,
     UPDATE_PROJECTS,
     UPDATE_SKILLS,
-    SingularProjectType, 
+    SingularProjectType,
+    InputSkillType,
     createUpdateAbout,
     createUpdateExperience,
     createUpdateProjects,
@@ -16,11 +17,11 @@ export const Reducer = (state:any,action:AnyAction) => {
     switch (action.type){
         case UPDATE_ABOUT:{
             const {data} = action.payload;
-            return {...state,about:data}
+            return {...state,about:{...data}}
         }
         case UPDATE_EXPERIENCE:{
             const {data} = action.payload;
-            return {...state,experience:data}
+            return {...state,experience:[...data]}
         }
         case UPDATE_PROJECTS:{
             const {data} = action.payload;
@@ -28,11 +29,12 @@ export const Reducer = (state:any,action:AnyAction) => {
               const {overview,links} = data;
               return {id,overview,links}
             })
-            return {...state,projects:data,projectIds:justIds}
+            return {...state,projects:{...data},projectIds:justIds}
         }
         case UPDATE_SKILLS:{
             const {data} = action.payload;
-            return {...state,skills:data}
+            const newData = data.map(({id,data}:InputSkillType) => ({name:id,image:data.image_url}))
+            return {...state,skills:newData}
         }
         case UPDATE_ALL:{
             const {about,experience,projects,skills} = action.payload;
@@ -40,7 +42,6 @@ export const Reducer = (state:any,action:AnyAction) => {
             state = Reducer(state,createUpdateExperience(experience))
             state = Reducer(state,createUpdateProjects(projects))
             state = Reducer(state,createUpdateSkills(skills))
-            //Above causing errors modify to use thunk?
             return state
         }
         default:

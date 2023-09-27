@@ -14,5 +14,5 @@ export type ExperienceType = {
 
 export const createUpdateExperience = (experience:ExperienceType) => ({
     type:UPDATE_EXPERIENCE,
-    payload:{data:experience}
+    payload:{data:[...experience]}
 })

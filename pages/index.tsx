@@ -1,4 +1,4 @@
-import React,{useEffect} from "react"
+import React,{useEffect,useState} from "react"
 import Head from 'next/head';
 import { GetStaticProps } from "next";
 
@@ -59,8 +59,8 @@ type Props = {
 }
 
 const Home = ({list,experience,nodes,skills}:Props) => {
-
-  store.dispatch(createUpdateAll(list,experience,nodes,skills))
+  useState(store.dispatch(createUpdateAll(list,experience,nodes,skills)))
+  
 
   return(
     <Provider store={store}>
@@ -78,7 +78,7 @@ const Home = ({list,experience,nodes,skills}:Props) => {
         </div>
 
         <div className="space-y-40" id={styles.text_section}>
-          {/* todo: <Link href="#contact-form">Tp Contact Form</Link> */}
+
 
           <section className="snap-start" id="about">
             <About/>
@@ -132,7 +132,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const nodes = await fetchData(process.env.API_URL+"/Projects");
   const skills = await fetchData(process.env.API_URL+"/Skills");
 
-  
+  store.dispatch(createUpdateAll(list,experience,nodes,skills))
 
   return {
       props: {

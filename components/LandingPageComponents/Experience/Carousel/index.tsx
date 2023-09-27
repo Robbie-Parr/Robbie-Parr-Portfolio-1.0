@@ -3,6 +3,8 @@ import {useEffect, useState} from "react";
 
 import styles from '@/styles/Experience.module.scss';
 
+import store from "@/Redux/store";
+
 import Card from "./Card";
 
 type Props = {
@@ -16,8 +18,21 @@ type Props = {
     }}[]
 }
 
-const Carousel = ({experience}:Props) => {
-    const experiences = experience.reverse()
+const Carousel = () => {
+    let experiences = [{
+        id:"",
+        data:{
+            description:"",
+        job_title:"",
+        start_end_date:"",
+        key_takeaways:[""],
+        references:[""]
+        }
+    }];
+
+    let experience = [...store.getState().experience]
+    experiences = experience.reverse()
+    
     
     const [hydrated, setHydrated] = useState(false);
     useEffect(() => {
@@ -28,7 +43,7 @@ const Carousel = ({experience}:Props) => {
         <> {hydrated &&
         <div id={styles.carousel}>
             
-            {experiences?.map( ({id,data}) => 
+            {experiences && experiences?.map( ({id,data}) => 
                 <Card 
                     key={id+data.job_title}
                     establishment={id} 

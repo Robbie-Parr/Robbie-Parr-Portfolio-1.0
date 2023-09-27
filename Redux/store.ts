@@ -9,6 +9,3 @@ const store = configureStore({
 
 
 export default store;
-
-//Be able to set initial state of store
-//Get data from store
