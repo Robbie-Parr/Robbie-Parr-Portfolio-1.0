@@ -4,7 +4,7 @@ import { Dispatch } from "@reduxjs/toolkit";
 import { UPDATE_ABOUT, AboutType,createUpdateAbout} from "./aboutActions";
 import { UPDATE_EXPERIENCE, ExperienceType, createUpdateExperience } from "./experienceActions";
 import { UPDATE_PROJECTS,ProjectsType,createUpdateProjects,SingularProjectType } from "./projectsActions";
-import { UPDATE_SKILLS, SkillsType,createUpdateSkills } from "./skillActions";
+import { UPDATE_SKILLS, InputSkillType,SkillsType,createUpdateSkills } from "./skillActions";
 
 
 export const UPDATE_ALL = "UPDATE_ALL";
@@ -31,5 +31,6 @@ export type {
     ExperienceType,
     ProjectsType,
     SingularProjectType,
-    SkillsType
+    SkillsType,
+    InputSkillType
 }

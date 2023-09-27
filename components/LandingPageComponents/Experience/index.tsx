@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useEffect} from "react"
 import Carousel from "./Carousel";
 
 import store from "@/Redux/store";
@@ -17,12 +17,10 @@ type Props = {
 }
 
 const Experience = () => {
-    let experience = store.getState().experience
-
     return(
         <div className="text-center" id={styles.main}>
             <h1 id={styles.title}>Experience</h1>
-            <Carousel experience={experience}/>
+            <Carousel/>
         </div>
     )
 }

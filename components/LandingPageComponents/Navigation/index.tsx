@@ -32,7 +32,7 @@ const Navigation = () => {
                 delay:.5,
             }}
          className="flex gap-x-5" id={styles.container}>
-            {data.map(props => <PageLinks {...props} />)}
+            {data.map(props => <PageLinks key={props.title} {...props} />)}
         </motion.nav>
     )
 }

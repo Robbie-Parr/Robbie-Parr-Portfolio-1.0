@@ -26,7 +26,8 @@ type Props = {
 
 const Projects = () => {
     let nodes = [{id:"",overview:"",links:[""]}]
-    nodes = store.getState().projectIds
+    nodes = [...store.getState().projectIds]
+    
 
     const [hydrated, setHydrated] = useState(false);
     useEffect(() => {
