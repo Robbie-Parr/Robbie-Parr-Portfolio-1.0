@@ -1,16 +1,13 @@
 import React from "react"
 import {useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faArrowAltCircleLeft} from "@fortawesome/free-solid-svg-icons";
 import { GetStaticProps } from "next";
-import { Provider } from "react-redux";
 
 import store from "@/Redux/store";
 import {createUpdateProjects} from "@/Redux/Actions"
 
 import styles from '@/styles/Projects.module.scss';
 
-import {ProjectPageComponents,ProjectSection} from "../../components/ProjectPageComponents"
+import {ProjectSection} from "../../components/ProjectPageComponents"
 import Title from "../../components/Title";
 import {Navigation} from "../../components/ProjectPageComponents"
 
@@ -40,7 +37,7 @@ const ProjectPage = ({nodes}:Props) => {
 
   return(
     <> {hydrated && 
-      <Provider store={store}>
+      <>
       <Title pageTitle="Projects"/>
       
       <div className="" id={styles.root}>
@@ -63,7 +60,7 @@ const ProjectPage = ({nodes}:Props) => {
           <ProjectSection/>
         </section>
       </div>
-      </Provider>}</>
+      </>}</>
   )
   
 }

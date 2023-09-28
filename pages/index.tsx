@@ -1,8 +1,6 @@
-import React,{useEffect,useState} from "react"
-import Head from 'next/head';
+import React,{useState} from "react"
 import { GetStaticProps } from "next";
 
-import { Provider } from "react-redux";
 import store from "../Redux/store";
 import {createUpdateAll} from "../Redux/Actions"
 
@@ -63,7 +61,7 @@ const Home = ({list,experience,nodes,skills}:Props) => {
   
 
   return(
-    <Provider store={store}>
+    
     <div className="h-screen snap-y snap-mandatory z-0" id={styles.main}>
         <Title pageTitle="Portfolio"/>
         
@@ -107,7 +105,7 @@ const Home = ({list,experience,nodes,skills}:Props) => {
         </footer>
 
     </div>
-    </Provider>
+    
   )
   
 }
