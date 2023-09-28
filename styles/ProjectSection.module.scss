@@ -8,6 +8,7 @@
         color:whitesmoke;
         
         background-image: url("/TextureBackground01.png");
+        background-repeat: no-repeat;
         font-family: 'Akaya Kanadaka', cursive;
         
         border-top-left-radius: 10px;
@@ -113,6 +114,7 @@
 
         > #toSelected:hover{
             background-image: url("/TextureBackground01.png");
+            background-repeat: no-repeat;
         }
 
         background-color: rgba(128, 128, 128, 0.288);

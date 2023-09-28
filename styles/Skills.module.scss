@@ -92,6 +92,7 @@
 
 #carousel_container::-webkit-scrollbar-thumb{
     background-image: url("/TextureBackground01.png");
+    background-repeat: no-repeat;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
@@ -129,6 +130,7 @@
     border-bottom-left-radius: 10px;
     padding:1%;
     background-image: url("/TextureBackground01.png");
+    background-repeat: no-repeat;
     > h1 {
         font-family: 'Akaya Kanadaka', cursive;
         color:whitesmoke;
