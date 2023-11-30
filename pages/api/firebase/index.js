@@ -52,6 +52,9 @@ const logReq = (...args) => {
 
 const imageRequest = async (...args) => {
   let root = args.join("/");
+  if(root==""){
+    return "";
+  }
   const url = await getDownloadURL(ref(storage,root));
   return url
 }
