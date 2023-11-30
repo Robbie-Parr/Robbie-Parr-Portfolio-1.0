@@ -6,6 +6,7 @@ import {
     UPDATE_PROJECTS,
     SET_CURRENT_PROJECT,
     UPDATE_SKILLS,
+    SET_CURRENT_RECIPE,
     SingularProjectType,
     InputSkillType,
     createUpdateAbout,
@@ -48,6 +49,10 @@ export const Reducer = (state:any,action:AnyAction) => {
         case SET_CURRENT_PROJECT:{
             const {data} = action.payload;
             return {...state, [data.id]:{...data.data}}
+        }
+        case SET_CURRENT_RECIPE:{
+            const {data} = action.payload;
+            return{...state,"recipe":{...data.data}}
         }
         default:
             return state;

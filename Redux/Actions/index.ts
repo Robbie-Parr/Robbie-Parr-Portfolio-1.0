@@ -21,6 +21,11 @@ import {
     InputSkillType,
     SkillsType,createUpdateSkills} from "./skillActions";
 
+import {
+    SET_CURRENT_RECIPE,
+    RecipeType,
+    createSetCurrentRecipe
+} from "./recipeActions"
 
 export const UPDATE_ALL = "UPDATE_ALL";
 
@@ -40,6 +45,7 @@ export {
     UPDATE_PROJECTS, createUpdateProjects,
     SET_CURRENT_PROJECT,createSetCurrentProject,
     UPDATE_SKILLS, createUpdateSkills,
+    SET_CURRENT_RECIPE,createSetCurrentRecipe
 }
 
 export type {
@@ -48,5 +54,6 @@ export type {
     ProjectsType,
     SingularProjectType,
     SkillsType,
-    InputSkillType
+    InputSkillType,
+    RecipeType
 }
