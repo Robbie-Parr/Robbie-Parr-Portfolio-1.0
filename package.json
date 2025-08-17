@@ -25,7 +25,6 @@
     "framer-motion": "^10.12.16",
     "next": "13.4.4",
     "react": "^18.2.0",
-    "react-d3-graph": "^2.6.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.44.3",
     "react-redux": "^8.1.2",

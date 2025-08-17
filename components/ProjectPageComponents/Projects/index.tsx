@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 
 import styles from '@/styles/Projects.module.scss';
 
-import Graph from "../../LandingPageComponents/Projects/Graph";
+//import Graph from "../../LandingPageComponents/Projects/Graph";
 import SelectedDisplay from "./SelectedDisplay";
 
 import store from "@/Redux/store";
@@ -44,12 +44,12 @@ const Projects = () => {
                     )}
                 </div>
                 
-                {nodes.length>1 &&
+                {/*nodes.length>1 &&
                 <Graph 
                     onClickNode={onClickNode} 
                     nodeIds={nodes.map(node => ({id:node.id}))} 
                     links={nodes.map(node => ({source1:node.id,targets:node.data.links}))}/>
-                }
+                */}
             </div>
         </div>
         )

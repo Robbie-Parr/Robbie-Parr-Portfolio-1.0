@@ -53,9 +53,9 @@ const Header = () => {
                 duration:1.2,
                 delay:.5,
             }} className="flex gap-x-3" id={styles.nonvital_icons}>
-                    <MeetupIcon/>
-                    <GitHubIcon/>
-                    <BlogIcon/>
+                 <GitHubIcon/>
+                    {/*<MeetupIcon/>
+                    <BlogIcon/>*/}
                 </motion.div>
             </div>
         </div>

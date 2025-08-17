@@ -1,6 +1,6 @@
 import React from "react"
 import {useEffect, useState } from "react";
-import { Graph } from "react-d3-graph";
+//import { Graph } from "react-d3-graph";
 
 import styles from '@/styles/ProjectSection.module.scss';
 import { list } from "postcss";
@@ -46,14 +46,14 @@ const Projects = ({onClickNode,nodeIds,links}:Props) => {
     return(
         <div id={styles.graph}>
             <div id={styles.innerGraph}>
-                { 
+                {/*
                 <Graph
                     id="graph-id"
                     data={data}
                     config={config}
                     onClickNode={onClickNode}                
                 />
-                }
+                */}
                 
             </div>
         </div>

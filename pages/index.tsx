@@ -84,21 +84,25 @@ const Home = ({list,experience,nodes,skills}:Props) => {
             <About/>
           </section>
 
+          {/*
           <section className="snap-start" id="experience">
             <Experience/>
           </section>
+          */}
 
           <section className="snap-start" id="skills">
             <Skills/>
           </section>
-        
+        {/*
           <section className="snap-start" id="projects-section">
             <Projects/>
-          </section>
+          </section>*/}
 
-          <section className="snap-start" id="contact-form">
+         {/*
+         <section className="snap-start" id="contact-form">
             <ContactForm/>
           </section>
+          */}
         
           
         </div>

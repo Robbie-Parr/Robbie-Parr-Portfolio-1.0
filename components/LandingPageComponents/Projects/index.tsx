@@ -6,7 +6,7 @@ import store from "@/Redux/store";
 import styles from '@/styles/ProjectSection.module.scss';
 
 
-import Graph from "./Graph";
+//import Graph from "./Graph";
 
 type Props = {
     nodes:
@@ -47,12 +47,12 @@ const Projects = () => {
             </div>
 
             <div className="flex" id={styles.content_section}>
-                {nodes.length>1 &&
+                {/*nodes.length>1 &&
                 <Graph 
                     onClickNode={onClickNode} 
                     nodeIds={nodes.map(node => ({id:node.id}))} 
                     links={nodes.map(node => ({source1:node.id,targets:node.links}))}/>
-                }
+                */}
                 <div className="flex-col" id={styles.selected}>
                 
                     <div className="flex" id={styles.selected_title}>
