@@ -1371,7 +1371,7 @@ justify-content: center;
     @media (max-width: 570px) {
         width:97%;
         height:50%;
-        margin-top: -30%;
+        margin:0;
     }
     
     margin-left:1%;
@@ -1423,9 +1423,6 @@ justify-content: center;
 {
     display: flex;
     flex-direction: row;
-    @media (max-width: 570px) {
-        margin-top: -30%;
-    }
     margin-bottom: 30px;
 }
 
