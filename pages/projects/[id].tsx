@@ -1,15 +1,13 @@
 import { useRouter } from "next/router";
-import React, {useEffect, useState } from "react";
+import React from "react";
 
 import { Provider } from "react-redux";
 import store from "@/Redux/store";
 
-
-import styles from '@/styles/Projects.module.scss';
 import Title from "../../components/Title";
 import {Navigation} from "../../components/ProjectPageComponents"
 
-import {useProject,SectionsMap,TitleSection} from "@/components/ProjectPageComponents";
+import {SectionsMap,TitleSection} from "@/components/ProjectPageComponents";
 
 const Page = () => {
   const router = useRouter();
@@ -19,9 +17,9 @@ const Page = () => {
   return(
     <Provider store={store}>
       <Title pageTitle={id+" Project"}/>
-      <div id={styles.single_project}>
+      <div id="single_project">
       
-        <div id={styles.header}>
+        <div id="header">
           <Navigation href="../projects"/>
           <TitleSection id={id}/>
         </div>      

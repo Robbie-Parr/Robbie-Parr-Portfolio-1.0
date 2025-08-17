@@ -1,8 +1,6 @@
 import React from "react";
 import {useEffect, useState} from "react";
 
-import styles from '@/styles/Experience.module.scss';
-
 import store from "@/Redux/store";
 
 import Card from "./Card";
@@ -41,7 +39,7 @@ const Carousel = () => {
 
     return(
         <> {hydrated &&
-        <div id={styles.carousel}>
+        <div id="carousel">
             
             {experiences && experiences?.map( ({id,data}) => 
                 <Card 

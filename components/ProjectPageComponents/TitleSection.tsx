@@ -1,10 +1,9 @@
-import React, {useEffect, useState } from "react";
-import styles from '@/styles/Projects.module.scss';
+import React from "react";
 
 import useProject from "./useProject";
 
 const TitleSection = ({id}:{id:string}) => {
-    const {node,sections} = useProject(id);
+    const {node} = useProject(id);
 
     
     return(
@@ -14,7 +13,7 @@ const TitleSection = ({id}:{id:string}) => {
         
         <div className="flex">
           <h1 className="m-4 p-2">{id}</h1>
-            <div id={styles.first_section}>
+            <div id="first_section">
               <p>{node?.overview}</p>
             </div>
         </div>

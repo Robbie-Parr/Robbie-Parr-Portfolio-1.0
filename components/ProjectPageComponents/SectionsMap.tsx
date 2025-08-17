@@ -1,5 +1,4 @@
-import React, {useEffect, useState } from "react";
-import styles from '@/styles/Projects.module.scss';
+import React from "react";
 
 import useProject from "./useProject";
 
@@ -12,7 +11,7 @@ const SectionsMap = ({id}:{id:string}) => {
     ({text,image,index}) => {
       if(index%2==0){
       return(
-        <div key={index} id={styles.left}>
+        <div key={index} id="left">
           <img src={image}/>
 
           <div>
@@ -24,7 +23,7 @@ const SectionsMap = ({id}:{id:string}) => {
       )
       }else{
         return(
-        <div key={index} id={styles.right}>
+        <div key={index} id="right">
           <div>
             {(text.split("\\n")).map(i => 
               <p key={i}>{i}</p>

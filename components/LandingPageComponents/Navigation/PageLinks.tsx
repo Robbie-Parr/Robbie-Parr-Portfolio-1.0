@@ -1,7 +1,5 @@
 import React from "react";
 
-import styles from '@/styles/NavigationSection.module.scss';
-
 type Props = {
     title:string,
     link:string
@@ -9,7 +7,7 @@ type Props = {
 
 const PageLinks = ({title,link}:Props) => {
     return(
-        <a href={link} id={styles.links}>
+        <a href={link} id="links">
             <div>
                 {title}
             </div>

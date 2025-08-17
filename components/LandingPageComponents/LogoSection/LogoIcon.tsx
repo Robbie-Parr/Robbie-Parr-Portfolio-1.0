@@ -1,7 +1,5 @@
 import React,{useEffect,useState} from "react";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
-
-import styles from '@/styles/LogoSection.module.scss';
+import { motion } from "framer-motion";
 
 import {imageRequest} from "../../../pages/api/firebase";
 
@@ -26,9 +24,9 @@ const LogoIcon = () => {
       };
 
     return(
-            <div className={styles.Logo_Icon}>
+            <div className="Logo_Icon">
                 <motion.div {...animationProps} onClick={() => setRevealed((prevRevealed) => !prevRevealed)}>
-                    <img id={styles.icon} alt="Logo" src={revealed ? logoURL : "/Logo.png"} />
+                    <img id="icon" alt="Logo" src={revealed ? logoURL : "/Logo.png"} />
                 </motion.div>
             </div>
         

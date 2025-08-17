@@ -1,9 +1,4 @@
 import React,{useEffect,useState} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
-import styles from '@/styles/Header.module.scss';
-
 
 import {imageRequest} from "../../../pages/api/firebase";
 
@@ -20,7 +15,7 @@ const CVLink = () => {
 
     return(
         <a href={cvLink} download>
-            <div className={styles.CV_Icon}>
+            <div className="CV_Icon">
                 <h2>CV</h2>
             </div>
         </a>

@@ -1,24 +1,17 @@
-import React,{useEffect,useState} from "react"
-import Head from 'next/head';
+import React ,{useState}from "react"
 import { GetStaticProps } from "next";
 
 import { Provider } from "react-redux";
 import store from "../Redux/store";
 import {createUpdateAll} from "../Redux/Actions"
 
-
-import styles from '@/styles/Index.module.scss';
-
-
 import {
   LogoSection,
   Header,
   Navigation,
   About,
-  Experience,
-  Projects,
-  ContactForm,
-  Skills} from "../components/LandingPageComponents"
+  Skills
+} from "../components/LandingPageComponents"
 import Title from "../components/Title";
 
 type Props = {
@@ -64,7 +57,7 @@ const Home = ({list,experience,nodes,skills}:Props) => {
 
   return(
     <Provider store={store}>
-    <div className="h-screen snap-y snap-mandatory z-0" id={styles.main}>
+    <div className="h-screen snap-y snap-mandatory z-0" id="main">
         <Title pageTitle="Portfolio"/>
         
 
@@ -77,12 +70,15 @@ const Home = ({list,experience,nodes,skills}:Props) => {
           <LogoSection/>
         </div>
 
-        <div className="space-y-40" id={styles.text_section}>
+        <div className="space-y-40" id="text_section">
 
 
-          <section className="snap-start" id="about">
-            <About/>
-          </section>
+          <div className="outofDateWarning">
+            <h1>This site's code has not been updated in <span>2 years</span> and is subsequently <span>out of date</span></h1>
+            <p id="outofDateWarning_subtext">There will not be updates on this page for a long while.<br/><br/>For up to date information, please find my LinkedIn Profile which is linked above</p>
+          </div>
+
+      
 
           {/*
           <section className="snap-start" id="experience">
@@ -93,6 +89,10 @@ const Home = ({list,experience,nodes,skills}:Props) => {
           <section className="snap-start" id="skills">
             <Skills/>
           </section>
+
+          {/*<section className="snap-start" id="about">
+            <About/>
+          </section>*/}
         {/*
           <section className="snap-start" id="projects-section">
             <Projects/>
@@ -106,9 +106,9 @@ const Home = ({list,experience,nodes,skills}:Props) => {
         
           
         </div>
-        <footer className="pt-2 pb-2">
-          <Navigation/>
-        </footer>
+        {/*<footer className="pt-2 pb-2">
+          {<Navigation/>}
+        </footer>*/}
 
     </div>
     </Provider>

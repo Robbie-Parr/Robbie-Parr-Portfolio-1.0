@@ -1,7 +1,6 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import {motion} from "framer-motion";
 
-import styles from '@/styles/Skills.module.scss';
 import useSwitch from "../useSwitch";
 import useImage from "../useImage";
 
