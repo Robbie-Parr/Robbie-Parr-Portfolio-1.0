@@ -74,7 +74,7 @@ const Home = ({list,experience,nodes,skills}:Props) => {
 
 
           <div className="outofDateWarning">
-            <h1>This site's code has not been updated in <span>2 years</span> and is subsequently <span>out of date</span></h1>
+            <h1>This site's content is <span>out of date</span></h1>
             <p id="outofDateWarning_subtext">There will not be updates on this page for a long while.<br/><br/>For up to date information, please find my LinkedIn Profile which is linked above</p>
           </div>
 
