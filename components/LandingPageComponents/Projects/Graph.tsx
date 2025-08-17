@@ -1,9 +1,4 @@
 import React from "react"
-import {useEffect, useState } from "react";
-import { Graph } from "react-d3-graph";
-
-import styles from '@/styles/ProjectSection.module.scss';
-import { list } from "postcss";
 
 type Props = {
     onClickNode : (nodeId: string) => void,
@@ -44,16 +39,16 @@ const Projects = ({onClickNode,nodeIds,links}:Props) => {
     };
     
     return(
-        <div id={styles.graph}>
-            <div id={styles.innerGraph}>
-                { 
+        <div id="graph">
+            <div id="innerGraph">
+                {/*
                 <Graph
                     id="graph-id"
                     data={data}
                     config={config}
                     onClickNode={onClickNode}                
                 />
-                }
+                */}
                 
             </div>
         </div>

@@ -1,5 +1,4 @@
-import React, {useEffect, useState } from "react";
-import styles from '@/styles/Recipes.module.scss';
+import React from "react";
 
 type Props = {
     title:string,
@@ -12,7 +11,7 @@ type Props = {
 const ListSection = ({title,list,
                     area=1,numbered=false}:Props) => {
     return(
-        <div className={area==1 ? styles.text_area1 : (area==2 ? styles.text_area2 : "")}>
+        <div className={area==1 ? "text_area1" : (area==2 ? "text_area2" : "")}>
             <h2>{title}</h2>
             {list?.map((item,index)=><p key={item}>{numbered ? (index+1)+") " : "- "}{item}</p>)}
         </div>

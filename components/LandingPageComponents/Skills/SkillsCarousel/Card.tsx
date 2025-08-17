@@ -1,6 +1,4 @@
-import React,{useEffect, useState} from "react";
-
-import styles from '@/styles/Skills.module.scss';
+import React from "react";
 
 import useImage from "../useImage";
 
@@ -12,7 +10,7 @@ type Props = {
 const Card = ({name,image}:Props) => {
     const imageUrl = useImage(image);
     return(
-        <div id={styles.card}>
+        <div id="skillcard">
             
             <div style={{
                 backgroundImage: `url(${imageUrl})`,

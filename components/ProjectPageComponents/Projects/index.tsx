@@ -1,11 +1,7 @@
-import React, {useEffect, useState } from "react";
-
-import styles from '@/styles/Projects.module.scss';
-
-import Graph from "../../LandingPageComponents/Projects/Graph";
-import SelectedDisplay from "./SelectedDisplay";
+import React, {useState } from "react";
 
 import store from "@/Redux/store";
+import SelectedDisplay from "./SelectedDisplay";
 
 type Props = {
     nodes:
@@ -36,20 +32,14 @@ const Projects = () => {
 
     
     return(
-        <div className="" id={styles.graph_main}>
-            <div className="flex-col" id={styles.content_section}>
-                <div className="" id={styles.carousel}>
+        <div className="" id="graph_main">
+            <div className="flex-col" id="content_section">
+                <div id="projectsCarousel">
                     {nodesSelected.map(selectedNode => 
                         <SelectedDisplay key={selectedNode} selectedNode={selectedNode} nodes={nodes} />
                     )}
                 </div>
-                
-                {nodes.length>1 &&
-                <Graph 
-                    onClickNode={onClickNode} 
-                    nodeIds={nodes.map(node => ({id:node.id}))} 
-                    links={nodes.map(node => ({source1:node.id,targets:node.data.links}))}/>
-                }
+            
             </div>
         </div>
         )

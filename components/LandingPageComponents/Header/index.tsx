@@ -3,20 +3,14 @@ import {motion} from "framer-motion";
 
 import LinkedInIcon from "./LinkedInIcon";
 import CVLink from "./CVLink"
-import MeetupIcon from "./MeetupIcon";
-import BlogIcon from "./BlogIcon";
 import GitHubIcon from "./GithubIcon";
-
-import styles from '@/styles/Header.module.scss';
 
 
 const Header = () => {
     
     return(
-        <div className="text-center flex w-full" id={styles.header}>
-            
-
-            <div className="gap-x-5" id={styles.header_icon_section}>
+        <div id="header">
+            <div id="header_icon_section">
             <motion.div 
             initial={{
                 x:"50%",
@@ -33,7 +27,7 @@ const Header = () => {
                 duration:1.2,
                 delay:.5,
             }}
-         className="flex gap-x-5" id={styles.vital_icons}>
+     id="vital_icons">
                     <LinkedInIcon/>
                     <CVLink/>
                 </motion.div>
@@ -52,10 +46,8 @@ const Header = () => {
             transition={{
                 duration:1.2,
                 delay:.5,
-            }} className="flex gap-x-3" id={styles.nonvital_icons}>
-                    <MeetupIcon/>
-                    <GitHubIcon/>
-                    <BlogIcon/>
+            }} id="nonvital_icons">
+                 <GitHubIcon/>
                 </motion.div>
             </div>
         </div>

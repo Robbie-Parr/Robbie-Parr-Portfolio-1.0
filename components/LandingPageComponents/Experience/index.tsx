@@ -1,9 +1,5 @@
-import React,{useEffect} from "react"
+import React from "react"
 import Carousel from "./Carousel";
-
-import store from "@/Redux/store";
-
-import styles from '@/styles/Experience.module.scss';
 
 type Props = {
     experience:{id:string, 
@@ -18,8 +14,8 @@ type Props = {
 
 const Experience = () => {
     return(
-        <div className="text-center" id={styles.main}>
-            <h1 id={styles.title}>Experience</h1>
+        <div className="text-center" id="experienceMain">
+            <h1 id="experiencetitle">Experience</h1>
             <Carousel/>
         </div>
     )

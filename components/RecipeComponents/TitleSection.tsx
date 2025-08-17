@@ -1,5 +1,4 @@
-import React, {useEffect, useState } from "react";
-import styles from '@/styles/Recipes.module.scss';
+import React from "react";
 
 import useRecipe from "./useRecipe";
 import useImage from "./useImage";
@@ -26,10 +25,10 @@ const TitleSection = ({series,id}:{series:string,id:string}) => {
               }}/>
             <div className="flex" style={{flexGrow:1}}/>
           </div>
-          <div id={styles.title}>
+          <div id="recipeTitle">
             <h1 className="m-4 p-2">{recipe.title}</h1>
           </div>
-          <div className="flex m-4" id={styles.first_section}>
+          <div className="flex m-4" id="first_section">
             <p>{recipe?.description}</p>
           </div>
         </>}

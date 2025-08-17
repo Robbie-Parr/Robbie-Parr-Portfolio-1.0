@@ -1,8 +1,6 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import {motion} from "framer-motion";
 import store from "@/Redux/store";
-
-import styles from '@/styles/About.module.scss';
 
 type Props = {
     list:{
@@ -38,9 +36,9 @@ const About = () => {
                 delay:.5,
             }}
         
-            className="flex-row flex" id={styles.main_about_section}
+         id="main_about_section"
             >
-            <h1 className="text-center items-center justify-center p-4" id={styles.about_title}>About Me</h1>
+            <h1 id="about_title">About Me</h1>
             <motion.div 
                 initial={{
                     opacity:0,
@@ -56,7 +54,7 @@ const About = () => {
                     duration:1.2
                 }}
             
-                className="space-y-5 p-4 bg-white" id={styles.about_text}
+                id="about_text"
                 >
                 
                 {list.text?.map(text => <p key={text}>{text}</p>)}

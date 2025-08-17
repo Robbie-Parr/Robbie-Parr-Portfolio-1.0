@@ -1,7 +1,4 @@
-import React,{useEffect, useState} from "react";
-import {motion} from "framer-motion";
-
-import styles from '@/styles/Skills.module.scss';
+import React from "react";
 
 import useSkills from "../useSkills";
 import Card from "./Card";
@@ -12,11 +9,11 @@ const SkillsCarousel = () => {
     const skills = useSkills();
 
     return(
-        <div id={styles.main}>
-        <div id={styles.title}>
+        <div id="skillsMain">
+        <div id="skillTitle">
             <h1>Skills</h1>
         </div>
-        <div id={styles.carousel_container}>
+        <div id="carousel_container">
             {skills.reverse().map((skill) => 
                 <Card key={skill.name} {...skill}/>
                 )}

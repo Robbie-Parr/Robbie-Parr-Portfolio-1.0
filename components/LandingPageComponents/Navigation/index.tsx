@@ -3,16 +3,11 @@ import {motion} from "framer-motion";
 
 import PageLinks from "./PageLinks";
 
-import styles from '@/styles/NavigationSection.module.scss';
-
 const Navigation = () => {
 
     const data = [
-        {title:"About",link:"/#about"},
-        {title:"Experience",link:"/#experience"},
+        
         {title:"Skills",link:"/#skills"},
-        {title:"Projects",link:"/#projects-section"},
-        {title:"Contact Me",link:"/#contact-form"}
     ]
 
     return(
@@ -31,7 +26,7 @@ const Navigation = () => {
                 duration:1.2,
                 delay:.5,
             }}
-         className="flex gap-x-5" id={styles.container}>
+        id="container">
             {data.map(props => <PageLinks key={props.title} {...props} />)}
         </motion.nav>
     )
